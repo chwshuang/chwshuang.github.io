@@ -1,0 +1,614 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>chwshuang.github.io</title>
+  <subtitle>大大的微笑Blog</subtitle>
+  <link href="/atom.xml" rel="self"/>
+  
+  <link href="https://chwshuang.github.io/"/>
+  <updated>2016-08-24T13:50:59.000Z</updated>
+  <id>https://chwshuang.github.io/</id>
+  
+  <author>
+    <name>chwshuang</name>
+    
+  </author>
+  
+  <generator uri="http://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>10004</title>
+    <link href="https://chwshuang.github.io/2016/08/24/10004/"/>
+    <id>https://chwshuang.github.io/2016/08/24/10004/</id>
+    <published>2016-08-24T13:50:59.000Z</published>
+    <updated>2016-08-24T13:50:59.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10003</title>
+    <link href="https://chwshuang.github.io/2016/08/24/10003/"/>
+    <id>https://chwshuang.github.io/2016/08/24/10003/</id>
+    <published>2016-08-24T13:49:59.000Z</published>
+    <updated>2016-08-24T13:50:39.000Z</updated>
+    
+    <content type="html"><![CDATA[<h3 id="Site"><a href="#Site" class="headerlink" title="Site"></a>Site</h3><p>title: chwshuang.github.io<br>subtitle: &#x5927;&#x5927;&#x7684;&#x5FAE;&#x7B11;Blog<br>description: &#x63CF;&#x8FF0;&#x5185;&#x5BB9;<br>author: chwshuang<br>language: zh-CN<br>timezone: </p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;h3 id=&quot;Site&quot;&gt;&lt;a href=&quot;#Site&quot; class=&quot;headerlink&quot; title=&quot;Site&quot;&gt;&lt;/a&gt;Site&lt;/h3&gt;&lt;p&gt;title: chwshuang.github.io&lt;br&gt;subtitle: &amp;#x5927;&amp;#x5927;&amp;#x768
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo在Github中搭建博客系统(1)Hexo安装</title>
+    <link href="https://chwshuang.github.io/2016/08/24/10001/"/>
+    <id>https://chwshuang.github.io/2016/08/24/10001/</id>
+    <published>2016-08-24T02:38:48.000Z</published>
+    <updated>2016-08-24T14:59:47.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;"><a href="#&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;" class="headerlink" title="&#x4EC0;&#x4E48;&#x662F; Hexo&#xFF1F;"></a>&#x4EC0;&#x4E48;&#x662F; <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;Node.js&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x4E00;&#x5957;&#x535A;&#x5BA2;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;&#x5E76;&#x53EF;&#x76F4;&#x63A5;&#x5C06;&#x9759;&#x6001;&#x7F51;&#x9875;&#x4E00;&#x952E;&#x4E0A;&#x4F20;&#x5230;Github Pages,&#x751F;&#x6210;Github&#x4E3B;&#x9875;,&#x6253;&#x9020;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;!</p>
+<p>&#x4E3B;&#x8981;&#x6709;&#x56DB;&#x5927;&#x7279;&#x6027;:</p>
+<ul>
+<li>&#x5FEB;&#x901F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5168;&#x7AD9;&#x9759;&#x6001;&#x9875;&#x9762;</li>
+<li>&#x652F;&#x6301;Markdown&#x8BED;&#x6CD5;</li>
+<li>&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github Pages,Heroku</li>
+<li>&#x4E30;&#x5BCC;&#x7684;&#x63D2;&#x4EF6;,&#x652F;&#x6301;Jade&#x3001;CoffeeScript&#x8BED;&#x8A00;&#x521B;&#x5EFA;&#x6A21;&#x677F;</li>
+</ul>
+<h1 id="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;"><a href="#&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;" class="headerlink" title="&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;"></a>&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><ol>
+<li>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;,&#x914D;&#x5408;Github&#x6765;&#x5C55;&#x793A;&#x4F60;&#x7684;&#x4E2A;&#x4EBA;&#x9879;&#x76EE;&#x548C;&#x6280;&#x672F;&#x7ECF;&#x5386;!</li>
+<li>&#x5DF2;&#x7ECF;&#x538C;&#x5026;&#x4E86;&#x4F20;&#x7EDF;&#x535A;&#x5BA2;&#x7684;&#x5343;&#x7BC7;&#x4E00;&#x5F8B;,&#x51C6;&#x5907;&#x9AD8;&#x5927;&#x4E0A;&#x4E00;&#x628A;!</li>
+</ol>
+<h1 id="&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;"><a href="#&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;" class="headerlink" title="&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;"></a>&#x600E;&#x4E48;&#x7528;<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><h2 id="&#x5B89;&#x88C5;"><a href="#&#x5B89;&#x88C5;" class="headerlink" title="&#x5B89;&#x88C5;"></a>&#x5B89;&#x88C5;</h2><p>Hexo&#x662F;&#x57FA;&#x4E8E;Node.js&#x7684;,&#x6240;&#x4EE5;&#x5FC5;&#x987B;&#x5728;&#x7535;&#x8111;&#x4E0A;&#x5B89;&#x88C5;Node.js,Node.js&#x7684;&#x5B89;&#x88C5;&#x65B9;&#x6CD5;&#x8FD9;&#x91CC;&#x5C31;&#x4E0D;&#x5C55;&#x5F00;,&#x81EA;&#x884C;google,baidu</p>
+<pre><code><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">&#x4F8B;&#x5B50;&#x4E2D;&#x4F7F;&#x7528;&#x7684;&#x7535;&#x8111;&#x662F;MacOX,&#x524D;&#x671F;&#x5B89;&#x88C5;&#x7684;&#x5DE5;&#x4F5C;&#x90FD;&#x662F;&#x5728;&#x547D;&#x4EE4;&#x884C;(Terminal)&#x4E2D;&#x5B8C;&#x6210;</div></pre></td></tr></table></figure>
+</code></pre><p>Node.js&#x5B89;&#x88C5;&#x597D;&#x4E86;&#x540E;,&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-cli -g</div></pre></td></tr></table></figure>
+<ul>
+<li>npm&#x662F;Node.js&#x5B89;&#x88C5;&#x65F6;&#x81EA;&#x5E26;&#x7684;&#x7C7B;&#x5E93;,&#x662F;&#x76EE;&#x524D;&#x5168;&#x7403;&#x6700;&#x5927;&#x7684;&#x7C7B;&#x5E93;&#x4E4B;&#x4E00;,&#x6BD4;Maven&#x4ED3;&#x5E93;&#x8FD8;&#x5927;,&#x7C7B;&#x4F3C;CentOS&#x7684;yum&#x6E90;,Mac OX&#x4E2D;brew&#x7684;&#x8F6F;&#x4EF6;&#x5E93;</li>
+<li>&#x901A;&#x8FC7;npm install&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x5B89;&#x88C5;&#x57FA;&#x4E8E;Node.js&#x7684;&#x6240;&#x6709;&#x63D2;&#x4EF6;</li>
+</ul>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;,&#x6211;&#x4EEC;&#x4E00;&#x822C;&#x5728;&#x5DE5;&#x4F5C;&#x76EE;&#x5F55;&#x6216;&#x8005;&#x7528;&#x6237;&#x76EE;&#x5F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x7F51;&#x7AD9;&#x76EE;&#x5F55;,&#x6BD4;&#x5982;blog&#x76EE;&#x5F55;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ mkdir blog</div></pre></td></tr></table></figure>
+<p>&#x7136;&#x540E;&#x901A;&#x8FC7;blog&#x76EE;&#x5F55;&#x521B;&#x5EFA;&#x7AD9;&#x70B9;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo init blog</div></pre></td></tr></table></figure>
+<p>&#x5B89;&#x88C5;&#x8FC7;&#x7A0B;:<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">admindeMacBook-Pro:~ admin hexo init blog</div><div class="line">INFO  Cloning hexo-starter to ~/blog</div><div class="line">hexo-site@0.0.0 /Users/admin/blog</div><div class="line">... &#x90E8;&#x5206;&#x7701;&#x7565;</div><div class="line">      &#x251C;&#x2500;&#x2500; range-parser@1.2.0 </div><div class="line">      &#x2514;&#x2500;&#x2500; statuses@1.3.0 </div><div class="line"></div><div class="line">INFO  Start blogging with Hexo!</div></pre></td></tr></table></figure></p>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;,&#x8FDB;&#x5165;blog&#x7AD9;&#x70B9;&#x76EE;&#x5F55;,&#x5B89;&#x88C5;&#x4E00;&#x4E0B;npm&#x63D2;&#x4EF6;&#x652F;&#x6301;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ <span class="built_in">cd</span> blog</div><div class="line">$ npm install</div></pre></td></tr></table></figure>
+<p>&#x542F;&#x52A8;&#x7AD9;&#x70B9;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div><div class="line">INFO  Start processing</div><div class="line">INFO  Hexo is running at http://localhost:4000/. Press Ctrl+C to stop.</div></pre></td></tr></table></figure>
+<p>&#x67E5;&#x770B;&#x7AD9;&#x70B9;:</p>
+<p>&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x4E2D;&#x67E5;&#x770B;<a href="http://localhost:4000/" target="_blank" rel="external">http://localhost:4000/</a></p>
+<p><img src="/2016/08/24/10001/img/homepage.jpg" alt="img"></p>
+<p>&#x5F53;&#x4F60;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;,&#x606D;&#x559C;&#x4F60;!&#x5927;&#x529F;&#x544A;&#x6210;!</p>
+<p>&#x7A81;&#x7136;&#x611F;&#x89C9;Level&#x63D0;&#x9AD8;&#x4E86;N&#x4E2A;&#x5C42;&#x6B21;,&#x9AD8;&#x5927;&#x4E0A;&#x4E86;&#x4E0D;&#x5C11;,&#x770B;&#x6765;&#x5F53;&#x4E0A;&#x603B;&#x7ECF;&#x7406;,&#x51FA;&#x4EFB;CEO,&#x8FCE;&#x5A36;&#x767D;&#x5BCC;&#x7F8E;,&#x4ECE;&#x6B64;&#x8D70;&#x5411;&#x4EBA;&#x751F;&#x5DC5;&#x5CF0;!&#x6307;&#x65E5;&#x53EF;&#x5F85;&#x554A;!<br>&#x60F3;&#x60F3;&#x662F;&#x4E0D;&#x662F;&#x8FD8;&#x6709;&#x70B9;&#x5C0F;&#x6FC0;&#x52A8;&#x5462;?  </p>
+<p><a href="../10002">&#x4E0B;&#x4E00;&#x8282;:Hexo&#x4E00;&#x952E;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x5230;Github</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      Hexo安装&lt;br&gt;快速自动生成全站静态页面 &lt;br&gt;支持Markdown语法 &lt;br&gt;一键部署到Github Pages,Heroku&lt;br&gt;丰富的插件,支持Jade、CoffeeScript语言创建模板
+    
+    </summary>
+    
+      <category term="Github" scheme="https://chwshuang.github.io/categories/Github/"/>
+    
+    
+      <category term="Hexo" scheme="https://chwshuang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Hexo在Github中搭建博客系统(2)Hexo一键发布文章到Github</title>
+    <link href="https://chwshuang.github.io/2016/08/24/10002/"/>
+    <id>https://chwshuang.github.io/2016/08/24/10002/</id>
+    <published>2016-08-24T02:38:48.000Z</published>
+    <updated>2016-08-24T14:57:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<h1 id="&#x4E00;&#x952E;&#x90E8;&#x7F72;"><a href="#&#x4E00;&#x952E;&#x90E8;&#x7F72;" class="headerlink" title="&#x4E00;&#x952E;&#x90E8;&#x7F72;"></a>&#x4E00;&#x952E;&#x90E8;&#x7F72;</h1><h2 id="&#x914D;&#x7F6E;Github"><a href="#&#x914D;&#x7F6E;Github" class="headerlink" title="&#x914D;&#x7F6E;Github"></a>&#x914D;&#x7F6E;Github</h2><p>&#x5728;blog&#x76EE;&#x5F55;,&#x7528;&#x6237;&#x6253;&#x5F00;_config.yml</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div></pre></td></tr></table></figure>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;_config.yml&#x4E2D;&#x7684;&#x5185;&#x5BB9;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">68 # Deployment</div><div class="line">69 ## Docs: https://hexo.io/docs/deployment.html</div><div class="line">70 deploy:</div><div class="line">71   type: git</div><div class="line">72   repo: https://github.com/chwshuang/chwshuang.github.com.git</div><div class="line">73 branch: gh-pages</div></pre></td></tr></table></figure>
+<p>Github&#x90E8;&#x7F72;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BE6;&#x89E3;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:  &#x8868;&#x793A;&#x90E8;&#x7F72;&#x8BBE;&#x7F6E;</div><div class="line">type:    &#x90E8;&#x7F72;&#x7C7B;&#x578B;,&#x652F;&#x6301;git,heroku</div><div class="line">repo:    &#x90E8;&#x7F72;&#x4F4D;&#x7F6E; git&#x4ED3;&#x5E93;&#x9879;&#x76EE;&#x7684;&#x4F4D;&#x7F6E;</div><div class="line">branch:  &#x90E8;&#x7F72;&#x5230;Github&#x7684;&#x5206;&#x652F;&#x540D;&#x79F0;</div><div class="line">message: &#x81EA;&#x5B9A;&#x4E49;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td style="text-align:center">Github&#x5E93;(Repository)&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>branch</td>
+<td style="text-align:center">&#x5206;&#x652F;&#x540D;&#x79F0;&#x3002;&#x5982;&#x679C;&#x60A8;&#x4F7F;&#x7528;&#x7684;&#x662F; GitHub &#x6216; GitCafe &#x7684;&#x8BDD;&#xFF0C;&#x7A0B;&#x5E8F;&#x4F1A;&#x5C1D;&#x8BD5;&#x81EA;&#x52A8;&#x68C0;&#x6D4B;</td>
+</tr>
+<tr>
+<td>message</td>
+<td style="text-align:center">&#x81EA;&#x5B9A;&#x4E49;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;(&#x9ED8;&#x8BA4;&#x4E3A; Site updated: {{  now(&#x2019;YYYY-MM-DD HH:mm:ss&#x2019;) }} )</td>
+</tr>
+</tbody>
+</table>
+<p>&#x914D;&#x7F6E;&#x4FEE;&#x6539;&#x5B8C;&#x6210;&#x540E;,&#x9700;&#x8981;&#x5B89;&#x88C5;&#x90E8;&#x7F72;&#x63D2;&#x4EF6;:<br>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-git.git" target="_blank" rel="external">hexo-deployer-git</a> &#x63D2;&#x4EF6;: &#x5728;blog&#x76EE;&#x5F55;&#x6267;&#x884C;&#x4EE5;&#x4E0B;&#x547D;&#x4EE4;&#x5373;&#x53EF;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-git --save</div></pre></td></tr></table></figure>
+<p>&#x63D2;&#x4EF6;&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;,&#x6267;&#x884C;&#x9879;&#x76EE;&#x6E05;&#x7406;&#x548C;&#x9759;&#x6001;&#x7F51;&#x9875;&#x751F;&#x6210;</p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean ; hexo genarate</div></pre></td></tr></table></figure>
+<p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8FDB;&#x884C;&#x90E8;&#x7F72;  </p>
+<figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<h1 id="&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"><a href="#&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;" class="headerlink" title="&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"></a>&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h1><h2 id="Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="external">hexo-deployer-heroku</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-heroku --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: heroku</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  message: [message]</div></pre></td></tr></table></figure>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td style="text-align:center">Heroku &#x5E93;(Repository)&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>message</td>
+<td style="text-align:center">&#x81EA;&#x5B9A;&#x63D0;&#x4EA4;&#x4FE1;&#x606F; (&#x9ED8;&#x8BA4;&#x4E3A; Site updated: { { now(&#x2019;YYYY-MM-DD HH:mm:ss&#x2019;) } })</td>
+</tr>
+</tbody>
+</table>
+<h2 id="Rsync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#Rsync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="Rsync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>Rsync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-rsync" target="_blank" rel="external">hexo-deployer-rsync</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-rsync --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: rsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  root: &lt;root&gt;</div><div class="line">  port: [port]</div><div class="line">  delete: [true|false]</div><div class="line">  verbose: [true|false]</div><div class="line">  ignore_errors: [true|false]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>user</td>
+<td style="text-align:center">&#x4F7F;&#x7528;&#x8005;&#x540D;&#x79F0;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>root</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x6839;&#x76EE;&#x5F55;</td>
+</tr>
+<tr>
+<td>port</td>
+<td style="text-align:center">&#x7AEF;&#x53E3;</td>
+<td style="text-align:center">22</td>
+</tr>
+<tr>
+<td>delete</td>
+<td style="text-align:center">&#x5220;&#x9664;&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x4E0A;&#x7684;&#x65E7;&#x6587;&#x4EF6;</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td style="text-align:center">&#x663E;&#x793A;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;</td>
+<td style="text-align:center">true</td>
+</tr>
+<tr>
+<td>ignore_errors</td>
+<td style="text-align:center">&#x5FFD;&#x7565;&#x9519;&#x8BEF;</td>
+<td style="text-align:center">false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="OpenShift-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#OpenShift-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="OpenShift &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>OpenShift &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-openshift" target="_blank" rel="external">hexo-deployer-openshift</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-openshift --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: openshift</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  message: [message]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>repo</td>
+<td style="text-align:center">OpenShift &#x5E93;(Repository)&#x5730;&#x5740;</td>
+</tr>
+<tr>
+<td>message</td>
+<td style="text-align:center">&#x81EA;&#x5B9A;&#x63D0;&#x4EA4;&#x4FE1;&#x606F; (&#x9ED8;&#x8BA4;&#x4E3A; Site updated: { { now(&#x2019;YYYY-MM-DD HH:mm:ss&#x2019;) } })</td>
+</tr>
+</tbody>
+</table>
+<h2 id="FTPSync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#FTPSync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="FTPSync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>FTPSync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="external">hexo-deployer-ftpsync</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-ftpsync --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: ftpsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  pass: &lt;password&gt;</div><div class="line">  remote: [remote]</div><div class="line">  port: [port]</div><div class="line">  ignore: [ignore]</div><div class="line">  connections: [connections]</div><div class="line">  verbose: [true&amp;|false]</div></pre></td></tr></table></figure></p>
+<table>
+<thead>
+<tr>
+<th>&#x53C2;&#x6570;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>host</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>user</td>
+<td style="text-align:center">&#x4F7F;&#x7528;&#x8005;&#x540D;&#x79F0;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>pass</td>
+<td style="text-align:center">&#x5BC6;&#x7801;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>remote</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x6839;&#x76EE;&#x5F55;</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td>port</td>
+<td style="text-align:center">&#x7AEF;&#x53E3;</td>
+<td style="text-align:center">21</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td style="text-align:center">&#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>connections</td>
+<td style="text-align:center">&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x6570;</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td style="text-align:center">&#x663E;&#x793A;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;</td>
+<td style="text-align:center">false</td>
+</tr>
+</tbody>
+</table>
+<h2 id="&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"><a href="#&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;" class="headerlink" title="&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"></a>&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;</h2><p>Hexo&#x652F;&#x6301;&#x540C;&#x65F6;&#x90E8;&#x7F72;git&#x548C;heroku&#x7B49;&#x591A;&#x4E2A;&#x4ED3;&#x5E93;,&#x53EA;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">- type: git</div><div class="line">  repo:</div><div class="line">- type: heroku</div><div class="line">  repo:</div></pre></td></tr></table></figure></p>
+<h2 id="&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><a href="#&#x5176;&#x4ED6;&#x65B9;&#x6CD5;" class="headerlink" title="&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"></a>&#x5176;&#x4ED6;&#x65B9;&#x6CD5;</h2><p>Hexo &#x751F;&#x6210;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x653E;&#x5728; public &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x590D;&#x5236;&#x5230;&#x60A8;&#x9700;&#x8981;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      Hexo在Github中搭建博客系统(2)Hexo一键发布文章到Github
+    
+    </summary>
+    
+      <category term="Github" scheme="https://chwshuang.github.io/categories/Github/"/>
+    
+    
+      <category term="Hexo" scheme="https://chwshuang.github.io/tags/Hexo/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>10005</title>
+    <link href="https://chwshuang.github.io/2016/08/24/undefined-2/"/>
+    <id>https://chwshuang.github.io/2016/08/24/undefined-2/</id>
+    <published>2016-08-24T02:34:28.000Z</published>
+    <updated>2016-08-24T02:34:28.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10004</title>
+    <link href="https://chwshuang.github.io/2016/08/24/undefined-1/"/>
+    <id>https://chwshuang.github.io/2016/08/24/undefined-1/</id>
+    <published>2016-08-24T02:33:01.000Z</published>
+    <updated>2016-08-24T02:33:01.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10003</title>
+    <link href="https://chwshuang.github.io/2016/08/24/undefined/"/>
+    <id>https://chwshuang.github.io/2016/08/24/undefined/</id>
+    <published>2016-08-24T02:32:41.000Z</published>
+    <updated>2016-08-24T02:32:41.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10001</title>
+    <link href="https://chwshuang.github.io/2016/08/24/title/"/>
+    <id>https://chwshuang.github.io/2016/08/24/title/</id>
+    <published>2016-08-24T02:30:49.000Z</published>
+    <updated>2016-08-24T02:30:49.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10001</title>
+    <link href="https://chwshuang.github.io/2016/08/24/title-11-2/"/>
+    <id>https://chwshuang.github.io/2016/08/24/title-11-2/</id>
+    <published>2016-08-24T02:22:32.000Z</published>
+    <updated>2016-08-24T02:22:32.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>10000</title>
+    <link href="https://chwshuang.github.io/2016/08/24/title-11/"/>
+    <id>https://chwshuang.github.io/2016/08/24/title-11/</id>
+    <published>2016-08-24T02:21:26.000Z</published>
+    <updated>2016-08-24T02:21:26.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Dubbo服务主机注册时出现主机上没有的IP的解决方案</title>
+    <link href="https://chwshuang.github.io/2016/08/23/title-11-1/"/>
+    <id>https://chwshuang.github.io/2016/08/23/title-11-1/</id>
+    <published>2016-08-23T13:32:15.000Z</published>
+    <updated>2016-08-23T13:34:43.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x521D;&#x6B21;&#x4F7F;&#x7528;dubbo&#xFF0C;&#x5728;&#x7814;&#x53D1;&#x73AF;&#x5883;&#x548C;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x6D4B;&#x8BD5;&#x6CA1;&#x6709;&#x95EE;&#x9898;&#xFF0C;&#x7136;&#x540E;&#x5C06;&#x670D;&#x52A1;&#x4E0A;&#x7EBF;&#xFF0C;&#x4E0A;&#x7EBF;&#x540E;&#xFF0C;Dubbo&#x670D;&#x52A1;&#x7AEF;&#x542F;&#x52A8;&#x6B63;&#x5E38;&#xFF0C;&#x5BA2;&#x6237;&#x7AEF;&#x542F;&#x52A8;&#x5931;&#x8D25;&#xFF0C;&#x5E76;&#x63D0;&#x793A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">Caused by: java.lang.IllegalStateException: </div><div class="line">Failed to check the status of the service com.xxx.xxx.service.LoginService. </div><div class="line">No provider available for the service com.xxxx.xxxx.service.LoginService:3.0 </div><div class="line">from the url zookeeper://202.106.199.37:2181/com.alibaba.dubbo.registry.RegistryService?anyhost=true&amp;application=xxx&amp;application.version=3.0&amp;check=false&amp;default.timeout=5000&amp;dubbo=2.5.3&amp;interface=com.xxx.xxx.service.LoginService&amp;methods=aLogin,bPassword,userLogin,modifyPasswordLogin,validate,fVersion,xLogout,userLogout,getTest,getCode,aLogin,aToken,aUser&amp;pid=2200&amp;revision=1.0&amp;side=consumer&#xD7;tamp=1462534379328&amp;version=3.0 to the consumer 202.106.199.37 use dubbo version 2.5.3</div></pre></td></tr></table></figure>
+<p>&#x610F;&#x601D;&#x662F;&#x542F;&#x52A8;&#x6D88;&#x8D39;&#x8005;&#x670D;&#x52A1;&#x7684;&#x65F6;&#x5019;&#xFF0C;&#x68C0;&#x67E5;Dubbo&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x63A5;&#x53E3;&#x65F6;&#x5F02;&#x5E38;&#xFF0C;&#x5728;&#x6D88;&#x8D39;&#x8005;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#xFF0C;&#x8BBF;&#x95EE;&#x4E0D;&#x4E86;zookeeper://202.106.199.37:2181/com.alibaba.dubbo.registr&#x8FD9;&#x4E2A;&#x5730;&#x5740;&#x63D0;&#x4F9B;&#x7684;&#x670D;&#x52A1;&#x3002;<br>&#x6392;&#x67E5;&#x8FD9;&#x4E2A;&#x95EE;&#x9898;&#x65F6;&#xFF0C;&#x53D1;&#x73B0;&#xFF1A;</p>
+<blockquote>
+<ol>
+<li><p>202.106.199.37&#x5E76;&#x4E0D;&#x662F;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x8BBE;&#x7F6E;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x4E00;&#x4E2A;&#x83AB;&#x540D;&#x8DD1;&#x51FA;&#x6765;&#x7684;IP&#x5730;&#x5740;</p>
+</li>
+<li><p>zookeeper&#x7684;&#x914D;&#x7F6E;&#x662F;<dubbo:registry protocol="zookeeper" address="192.168.0.123:2181"> &#xFF0C;&#x600E;&#x4E48;&#x4F1A;&#x53D8;&#x6210;zookeeper://202.106.199.37:2181/&#x4E86;</dubbo:registry></p>
+</li>
+<li><p>&#x5728;DubboAdmin&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#xFF0C;&#x53D1;&#x73B0;&#x751F;&#x4EA7;&#x8005;&#xFF0C;&#x6D88;&#x8D39;&#x8005;&#x90FD;&#x6709;&#xFF0C;&#x5C31;&#x662F;&#x751F;&#x4EA7;&#x8005;&#x7AEF;&#x63D0;&#x793A;&#x6CA1;&#x6709;&#x6D88;&#x8D39;&#x8005;&#x3002;</p>
+</li>
+<li><p>&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x6709;VPN&#xFF0C;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x4E5F;&#x6709;VPN&#xFF0C;&#x6D4B;&#x8BD5;&#x73AF;&#x5883;&#x6CA1;&#x6709;&#x4E8B;&#xFF0C;&#x5728;&#x751F;&#x4EA7;&#x73AF;&#x5883;&#x5374;&#x51FA;&#x95EE;&#x9898;&#xFF0C;&#x6240;&#x4EE5;&#x6392;&#x9664;VPN&#x7684;&#x95EE;&#x9898;&#x3002;</p>
+</li>
+</ol>
+</blockquote>
+<p>&#x901A;&#x8FC7;&#x641C;&#x7D22;&#x95EE;&#x9898;&#xFF0C;&#x53D1;&#x73B0;&#x5F88;&#x591A;&#x4EBA;&#x51FA;&#x73B0;&#x7C7B;&#x4F3C;&#x95EE;&#x9898;&#xFF0C;&#x5C31;&#x662F;Dubbo&#x5728;&#x6709;VPN&#x7684;&#x673A;&#x5668;&#x4E0A;&#x9700;&#x8981;&#x7ED1;&#x5B9A;&#x4E3B;&#x673A;&#x516C;&#x7F51;IP&#xFF0C;&#x4F46;&#x662F;&#x516C;&#x7F51;IP&#x662F;&#x6620;&#x5C04;&#x8FC7;&#x6765;&#x7684;&#xFF0C;&#x6240;&#x4EE5;&#x89E3;&#x51B3;&#x8DEF;&#x5F84;&#x8D70;&#x4E0D;&#x901A;&#x3002;</p>
+<p>&#x53E6;&#x5916;&#x4E00;&#x4E2A;&#x662F;&#x8BF4;Dubbo&#x4F7F;&#x7528;&#x4E86;&#x4E00;&#x4E2A;DNS&#x7684;&#x5730;&#x5740;&#xFF0C;&#x901A;&#x8FC7;&#x4FEE;&#x6539;Dubbo&#x670D;&#x52A1;&#x5668;&#x4E0A;&#x7684;DNS&#x914D;&#x7F6E;&#x3010;vim /etc/resolv.conf &#x3011;&#x628A;&#x670D;&#x52A1;&#x540D;&#x79F0;&#x6539;&#x5230;DNS&#x4E0A;&#x53BB;&#x5C31;&#x53EF;&#x4EE5;&#x4E86;&#x3002;&#x8FD9;&#x4E2A;&#x6211;&#x6CA1;&#x6709;&#x505A;&#x3002;&#x89C9;&#x5F97;&#x592A;&#x9EBB;&#x70E6;&#x3002;</p>
+<p>&#x6700;&#x540E;&#x8FD8;&#x662F;&#x89C9;&#x5F97;&#x5E94;&#x8BE5;&#x662F;IP&#x7ED1;&#x5B9A;&#x7684;&#x4E8B;&#x3002;&#x628A;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E2D;&#x3010;dubbo/webapps/ROOT/WEB-INF/dubbo.properties&#x3011;&#x6587;&#x4EF6;&#x4E2D;&#x52A0;&#x5165;&#x3010;dubbo.protocol.host=192.168.0.123&#x3011;&#xFF0C;&#x7136;&#x540E;&#x5728;Dubbo&#x670D;&#x52A1;&#x7AEF;spring&#x7684;dubbo&#x914D;&#x7F6E;&#x6587;&#x4EF6;&#x3010;<dubbo:protocol name="dubbo" port="20885">&#x3011;&#x4E2D;&#x52A0;&#x5165;&#x3010; host=&#x201D;192.168.0.123&#x201D;&#x3011;&#xFF0C;&#x5728;Dubbo&#x6D88;&#x8D39;&#x8005;&#x7AEF;&#x52A0;&#x5165;&#x3010;<dubbo:protocol host="192.168.0.123">&#x3011;&#x7684;&#x914D;&#x7F6E;&#x3002;&#x7136;&#x540E;&#x91CD;&#x542F;Dubbo&#x7BA1;&#x7406;&#x5458;&#x63A7;&#x5236;&#x53F0;&#x3001;&#x505C;&#x6B62;&#x6D88;&#x8D39;&#x8005;&#x7AEF;&#xFF0C;&#x505C;&#x6B62;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x7AEF;&#xFF0C;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x63D0;&#x4F9B;&#x7AEF;&#xFF0C;&#x518D;&#x542F;&#x52A8;&#x6D88;&#x8D39;&#x8005;&#x7AEF;&#x3002;&#x53BB;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x5237;&#x65B0;&#x770B;&#x770B;&#xFF0C;&#x662F;&#x4E0D;&#x662F;&#x4E00;&#x5207;&#x90FD;&#x6B63;&#x5E38;&#x4E86;&#xFF01;</dubbo:protocol></dubbo:protocol></p>
+<p>&#x8BF4;&#x660E;&#xFF1A;&#x6211;&#x4EEC;&#x7EBF;&#x4E0A;&#x76EE;&#x524D;&#x5C31;&#x4E00;&#x53F0;&#x673A;&#x5668;&#xFF0C;&#x6240;&#x4EE5;&#x670D;&#x52A1;&#x7AEF;&#x548C;&#x6D88;&#x8D39;&#x8005;&#x7AEF;&#x90FD;&#x662F;&#x540C;&#x4E00;&#x4E2A;IP&#x5730;&#x5740;&#xFF0C;&#x5982;&#x679C;&#x4F60;&#x662F;&#x670D;&#x52A1;&#x5668;&#x96C6;&#x7FA4;&#xFF0C;&#x8FD9;&#x4E2A;&#x4EC5;&#x4F9B;&#x53C2;&#x8003;&#x3002;</p>
+<p>192.168.0.123&#x8FD9;&#x4E2A;IP&#x5730;&#x5740;&#x662F;VPN&#x7ED9;&#x5185;&#x7F51;&#x6620;&#x5C04;&#x7684;IP&#x5730;&#x5740;&#xFF0C;&#x5176;&#x4ED6;IP&#x5730;&#x5740;&#x548C;&#x672C;&#x673A;&#x7684;IP&#x5730;&#x5740;&#x6CA1;&#x6709;&#x8BD5;&#x8FC7;&#x884C;&#x4E0D;&#x884C;&#xFF0C;&#x6240;&#x4EE5;&#x9700;&#x8981;&#x81EA;&#x884C;&#x6D4B;&#x8BD5;&#x3002;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;&amp;#x521D;&amp;#x6B21;&amp;#x4F7F;&amp;#x7528;dubbo&amp;#xFF0C;&amp;#x5728;&amp;#x7814;&amp;#x53D1;&amp;#x73AF;&amp;#x5883;&amp;#x548C;&amp;#x6D4B;&amp;#x8BD5;&amp;#x73AF;&amp;#x5883;&amp;#x6D4B;&amp;#x8
+    
+    </summary>
+    
+    
+  </entry>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://chwshuang.github.io/2016/08/23/hello-world/"/>
+    <id>https://chwshuang.github.io/2016/08/23/hello-world/</id>
+    <published>2016-08-23T13:15:08.000Z</published>
+    <updated>2016-08-23T13:15:08.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>Welcome to <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="external">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="external">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="external">GitHub</a>.</p>
+<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2><h3 id="Create-a-new-post"><a href="#Create-a-new-post" class="headerlink" title="Create a new post"></a>Create a new post</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;My New Post&quot;</span></div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/writing.html" target="_blank" rel="external">Writing</a></p>
+<h3 id="Run-server"><a href="#Run-server" class="headerlink" title="Run server"></a>Run server</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo server</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/server.html" target="_blank" rel="external">Server</a></p>
+<h3 id="Generate-static-files"><a href="#Generate-static-files" class="headerlink" title="Generate static files"></a>Generate static files</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo generate</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/generating.html" target="_blank" rel="external">Generating</a></p>
+<h3 id="Deploy-to-remote-sites"><a href="#Deploy-to-remote-sites" class="headerlink" title="Deploy to remote sites"></a>Deploy to remote sites</h3><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
+<p>More info: <a href="https://hexo.io/docs/deployment.html" target="_blank" rel="external">Deployment</a></p>
+]]></content>
+    
+    <summary type="html">
+    
+      adfadfasfa
+    
+    </summary>
+    
+      <category term="读书" scheme="https://chwshuang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="Nginx" scheme="https://chwshuang.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello</title>
+    <link href="https://chwshuang.github.io/2016/08/23/title-3/"/>
+    <id>https://chwshuang.github.io/2016/08/23/title-3/</id>
+    <published>2016-08-23T10:54:28.000Z</published>
+    <updated>2016-08-23T13:14:09.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="百题" scheme="https://chwshuang.github.io/categories/%E7%99%BE%E9%A2%98/"/>
+    
+    
+      <category term="Spring" scheme="https://chwshuang.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello new 5</title>
+    <link href="https://chwshuang.github.io/2016/08/23/title-2/"/>
+    <id>https://chwshuang.github.io/2016/08/23/title-2/</id>
+    <published>2016-08-23T10:54:20.000Z</published>
+    <updated>2016-08-23T13:14:09.000Z</updated>
+    
+    <summary type="html">
+    
+    </summary>
+    
+      <category term="百题" scheme="https://chwshuang.github.io/categories/%E7%99%BE%E9%A2%98/"/>
+    
+    
+      <category term="Nginx" scheme="https://chwshuang.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>hello new 4</title>
+    <link href="https://chwshuang.github.io/2016/08/23/title-1/"/>
+    <id>https://chwshuang.github.io/2016/08/23/title-1/</id>
+    <published>2016-08-23T10:52:18.000Z</published>
+    <updated>2016-08-24T14:57:45.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>13:51:28.741 FATAL (unknown path) [Line 7, Column 533]<br>  Error: Unable to call <code>now</code>, which is undefined or falsey<br>Template render error: (unknown path) [Line 7, Column 533]<br>  Error: Unable to call <code>now</code>, which is undefined or falsey<br>    at Object.exports.prettifyError (/Users/hushuang/hexosite/node_modules/nunjucks/src/lib.js:34:15)<br>    at /Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:485:31<br>    at root [as rootRenderFunc] (eval at <anonymous> (/Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:564:24), <anonymous>:20:3)<br>    at Obj.extend.render (/Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:478:15)<br>    at Obj.extend.renderString (/Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:326:21)<br>    at /Users/hushuang/hexosite/node_modules/hexo/lib/extend/tag.js:66:9<br>    at Promise._execute (/Users/hushuang/hexosite/node_modules/bluebird/js/release/debuggability.js:272:9)<br>    at Promise._resolveFromExecutor (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:475:18)<br>    at new Promise (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:77:14)<br>    at Tag.render (/Users/hushuang/hexosite/node_modules/hexo/lib/extend/tag.js:64:10)<br>    at Object.tagFilter [as onRenderEnd] (/Users/hushuang/hexosite/node_modules/hexo/lib/hexo/post.js:253:16)<br>    at /Users/hushuang/hexosite/node_modules/hexo/lib/hexo/render.js:65:19<br>    at tryCatcher (/Users/hushuang/hexosite/node_modules/bluebird/js/release/util.js:16:23)<br>    at Promise._settlePromiseFromHandler (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:504:31)<br>    at Promise._settlePromise (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:561:18)<br>    at Promise._settlePromise0 (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:606:10)<br>    at Promise._settlePromises (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:685:18)<br>    at Async._drainQueue (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:138:16)<br>    at Async._drainQueues (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:148:10)<br>    at Immediate.Async.drainQueues (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:17:14)<br>    at runCallback (timers.js:574:20)<br>    at tryOnImmediate (timers.js:554:5)</anonymous></anonymous></p>
+<p>14:55:15.987 FATAL (unknown path) [Line 119, Column 62]<br>  unexpected token: }}<br>Template render error: (unknown path) [Line 119, Column 62]<br>  unexpected token: }}<br>    at Object.exports.prettifyError (/Users/hushuang/hexosite/node_modules/nunjucks/src/lib.js:34:15)<br>    at Obj.extend.render (/Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:468:27)<br>    at Obj.extend.renderString (/Users/hushuang/hexosite/node_modules/nunjucks/src/environment.js:326:21)<br>    at /Users/hushuang/hexosite/node_modules/hexo/lib/extend/tag.js:66:9<br>    at Promise._execute (/Users/hushuang/hexosite/node_modules/bluebird/js/release/debuggability.js:272:9)<br>    at Promise._resolveFromExecutor (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:475:18)<br>    at new Promise (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:77:14)<br>    at Tag.render (/Users/hushuang/hexosite/node_modules/hexo/lib/extend/tag.js:64:10)<br>    at Object.tagFilter [as onRenderEnd] (/Users/hushuang/hexosite/node_modules/hexo/lib/hexo/post.js:253:16)<br>    at /Users/hushuang/hexosite/node_modules/hexo/lib/hexo/render.js:65:19<br>    at tryCatcher (/Users/hushuang/hexosite/node_modules/bluebird/js/release/util.js:16:23)<br>    at Promise._settlePromiseFromHandler (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:504:31)<br>    at Promise._settlePromise (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:561:18)<br>    at Promise._settlePromise0 (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:606:10)<br>    at Promise._settlePromises (/Users/hushuang/hexosite/node_modules/bluebird/js/release/promise.js:685:18)<br>    at Async._drainQueue (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:138:16)<br>    at Async._drainQueues (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:148:10)<br>    at Immediate.Async.drainQueues (/Users/hushuang/hexosite/node_modules/bluebird/js/release/async.js:17:14)<br>    at runCallback (timers.js:574:20)<br>    at tryOnImmediate (timers.js:554:5)<br>    at processImmediate [as _immediateCallback] (timers.js:533:5)</p>
+<p>Template render error: parseSignature: expected comma after expression<br>        at Error.exports.TemplateError (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/lib.js:51:19)<br>        at Object.extend.fail (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:64:15)<br>        at Object.extend.parseSignature (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1077:22)<br>        at Object.extend.parsePostfix (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:616:47)<br>        at Object.extend.parsePrimary (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:933:29)<br>        at Object.extend.parseUnary (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:882:25)<br>        at Object.extend.parsePow (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:856:25)<br>        at Object.extend.parseMod (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:844:25)<br>        at Object.extend.parseFloorDiv (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:832:25)<br>        at Object.extend.parseDiv (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:820:25)<br>        at Object.extend.parseMul (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:808:25)<br>        at Object.extend.parseSub (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:796:25)<br>        at Object.extend.parseAdd (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:784:25)<br>        at Object.extend.parseCompare (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:751:25)<br>        at Object.extend.parseIn (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:720:23)<br>        at Object.extend.parseNot (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:716:21)<br>        at Object.extend.parseAnd (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:698:25)<br>        at Object.extend.parseOr (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:686:25)<br>        at Object.extend.parseInlineIf (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:668:25)<br>        at Object.extend.parseExpression (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:663:25)<br>        at Object.extend.parseNodes (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1158:30)<br>        at Object.extend.parse (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1173:46)<br>        at Object.extend.parseUntilBlocks (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1111:24)<br>        at NunjucksBlock._parseBody (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/extend/tag.js:111:21)<br>        at NunjucksBlock.parse (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/extend/tag.js:105:19)<br>        at Object.extend.parseStatement (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:540:36)<br>        at Object.extend.parseNodes (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1151:30)<br>        at Object.extend.parseAsRoot (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1177:42)<br>        at Object.module.exports.parse (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/parser.js:1199:18)<br>        at Object.module.exports.compile (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/compiler.js:1118:48)<br>        at Obj.extend._compile (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/environment.js:444:35)<br>        at Obj.extend.compile (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/environment.js:433:18)<br>        at null.<anonymous> (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/environment.js:378:22)<br>        at Object.exports.withPrettyErrors (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/lib.js:24:16)<br>        at Obj.extend.render (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/environment.js:374:20)<br>        at Obj.extend.renderString (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/nunjucks/src/environment.js:261:21)<br>        at /media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/extend/tag.js:56:9<br>        at tryCatcher (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/util.js:24:31)<br>        at Promise._resolveFromResolver (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/promise.js:427:31)<br>        at new Promise (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/promise.js:53:37)<br>        at Tag.render (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/extend/tag.js:55:10)<br>        at Object.tagFilter [as onRenderEnd] (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/hexo/post.js:253:16)<br>        at Promise.then.then.then.output (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/lib/hexo/render.js:55:19)<br>        at tryCatcher (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/util.js:24:31)<br>        at Promise._settlePromiseFromHandler (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/promise.js:454:31)<br>        at Promise._settlePromiseAt (/media/WinE/User/Documents/howiefh.github.io/node_modules/hexo/node_modules/bluebird/js/main/promise.js:530:18)</anonymous></p>
+<pre><code>| &#x53C2;&#x6570;           | &#x8BF4;&#x660E;                 |
+| ------------- |:-------------------:|
+| repo          | OpenShift &#x5E93;&amp;#40;Repository&amp;#41;&#x5730;&#x5740;        |
+| message       | &#x81EA;&#x5B9A;&#x63D0;&#x4EA4;&#x4FE1;&#x606F; &amp;#40;&#x9ED8;&#x8BA4;&#x4E3A; Site updated: &amp;#123; &amp;#123; now&amp;#40;&apos;YYYY-MM-DD HH:mm:ss&apos;&amp;#41; &amp;#125; &amp;#125;&amp;#41; |
+</code></pre>]]></content>
+    
+    <summary type="html">
+    
+      &lt;p&gt;13:51:28.741 FATAL (unknown path) [Line 7, Column 533]&lt;br&gt;  Error: Unable to call &lt;code&gt;now&lt;/code&gt;, which is undefined or falsey&lt;br&gt;Templ
+    
+    </summary>
+    
+      <category term="百题" scheme="https://chwshuang.github.io/categories/%E7%99%BE%E9%A2%98/"/>
+    
+    
+      <category term="Nginx" scheme="https://chwshuang.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>新博客2</title>
+    <link href="https://chwshuang.github.io/2016/08/23/id-1/"/>
+    <id>https://chwshuang.github.io/2016/08/23/id-1/</id>
+    <published>2016-08-23T09:05:36.000Z</published>
+    <updated>2016-08-23T13:14:26.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x6253;&#x53D1;</p>
+]]></content>
+    
+    <summary type="html">
+    
+      adfadfasfa
+    
+    </summary>
+    
+      <category term="读书" scheme="https://chwshuang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="Nginx" scheme="https://chwshuang.github.io/tags/Nginx/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>你好，Hexo博客！</title>
+    <link href="https://chwshuang.github.io/2016/08/23/%E4%BD%A0%E5%A5%BD%EF%BC%8CHexo%E5%8D%9A%E5%AE%A2%EF%BC%81/"/>
+    <id>https://chwshuang.github.io/2016/08/23/你好，Hexo博客！/</id>
+    <published>2016-08-23T08:15:18.000Z</published>
+    <updated>2016-08-23T13:12:41.000Z</updated>
+    
+    <content type="html"><![CDATA[<p>&#x4ECA;&#x5929;&#x5B89;&#x88C5;Hexo&#x535A;&#x5BA2;&#x642D;&#x5EFA;&#x6559;&#x7A0B;&#x5F00;&#x53D1;&#x4E86;&#x535A;&#x5BA2;<br>&#x73B0;&#x5728;&#x5206;&#x4EAB;&#x642D;&#x5EFA;&#x8FC7;&#x7A0B;,&#x611F;&#x8C22;hexo&#x56E2;&#x961F;&#x548C;maupassant&#x4E3B;&#x9898;&#x521B;&#x4F5C;&#x56E2;&#x961F;,&#x662F;&#x4F60;&#x4EEC;&#x8D4B;&#x4E88;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x7684;&#x751F;&#x547D;!</p>
+]]></content>
+    
+    <summary type="html">
+    
+      adfadfasfa
+    
+    </summary>
+    
+      <category term="读书" scheme="https://chwshuang.github.io/categories/%E8%AF%BB%E4%B9%A6/"/>
+    
+    
+      <category term="Spring" scheme="https://chwshuang.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>My New Post</title>
+    <link href="https://chwshuang.github.io/2016/08/23/My-New-Post/"/>
+    <id>https://chwshuang.github.io/2016/08/23/My-New-Post/</id>
+    <published>2016-08-23T07:05:54.000Z</published>
+    <updated>2016-08-24T02:37:54.000Z</updated>
+    
+    <content type="html"><![CDATA[<blockquote><p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque hendrerit lacus ut purus iaculis feugiat. Sed nec tempor elit, quis aliquam neque. Curabitur sed diam eget dolor fermentum semper at eu lorem.</p>
+</blockquote>
+<blockquote><p>Do not just seek happiness for yourself. Seek happiness for all. Through kindness. Through mercy.</p>
+<footer><strong>David Levithan</strong><cite>Wide Awake</cite></footer></blockquote>
+<blockquote><p>NEW: DevDocs now comes with syntax highlighting. <a href="http://devdocs.io" target="_blank" rel="external">http://devdocs.io</a></p>
+<footer><strong>@DevDocs</strong><cite><a href="https://twitter.com/devdocs/status/356095192085962752" target="_blank" rel="external">twitter.com/devdocs/status/356095192085962752</a></cite></footer></blockquote>
+<blockquote><p>Every interaction is both precious and an opportunity to delight.</p>
+<footer><strong>Seth Godin</strong><cite><a href="http://sethgodin.typepad.com/seths_blog/2009/07/welcome-to-island-marketing.html" target="_blank" rel="external">Welcome to Island Marketing</a></cite></footer></blockquote>
+<figure class="highlight plain"><figcaption><span>[title] [] [url] [link text]</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">code snippet</div></pre></td></tr></table></figure>
+<h4 id="&#x6837;&#x4F8B;"><a href="#&#x6837;&#x4F8B;" class="headerlink" title="&#x6837;&#x4F8B;"></a>&#x6837;&#x4F8B;</h4><p>&#x666E;&#x901A;&#x7684;&#x4EE3;&#x7801;&#x5757;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">alert(&apos;Hello World!&apos;);</div></pre></td></tr></table></figure>
+<p>&#x6307;&#x5B9A;&#x8BED;&#x8A00;</p>
+<figure class="highlight java"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">[rectangle setX: <span class="number">10</span> y: <span class="number">10</span> width: <span class="number">20</span> height: <span class="number">20</span>];</div></pre></td></tr></table></figure>
+<p>&#x9644;&#x52A0;&#x8BF4;&#x660E;</p>
+<figure class="highlight plain"><figcaption><span>Array.map</span></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">array.map(callback[, thisArg])</div></pre></td></tr></table></figure>
+<p>&#x9644;&#x52A0;&#x8BF4;&#x660E;&#x548C;&#x7F51;&#x5740;</p>
+<figure class="highlight plain"><figcaption><span>_.compact</span><a href="http://underscorejs.org/#compact" target="_blank" rel="external">Underscore.js</a></figcaption><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">_.compact([0, 1, false, 2, &apos;&apos;, 3]);</div><div class="line">=&gt; [1, 2, 3]</div></pre></td></tr></table></figure>
+<p>&#x53CD;&#x5F15;&#x53F7;&#x4EE3;&#x7801;&#x5757;<br>&#x53E6;&#x4E00;&#x79CD;&#x5F62;&#x5F0F;&#x7684;&#x4EE3;&#x7801;&#x5757;&#xFF0C;&#x4E0D;&#x540C;&#x7684;&#x662F;&#x5B83;&#x4F7F;&#x7528;&#x4E09;&#x4E2A;&#x53CD;&#x5F15;&#x53F7;&#x6765;&#x5305;&#x88F9;&#x3002;</p>
+<p><code>[language] [title] [url] [link text] code snippet</code></p>
+<blockquote class="pullquote [class]"><p>content</p>
+</blockquote>
+<p>&#x5728;&#x6587;&#x7AE0;&#x4E2D;&#x63D2;&#x5165; iframe&#x3002;</p>
+<iframe src="https://www.baidu.com" width="[width]" height="[height]" frameborder="0" allowfullscreen></iframe>
+]]></content>
+    
+    <summary type="html">
+    
+      adfadfasfa
+    
+    </summary>
+    
+    
+      <category term="Spring" scheme="https://chwshuang.github.io/tags/Spring/"/>
+    
+  </entry>
+  
+</feed>

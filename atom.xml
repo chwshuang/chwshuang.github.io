@@ -131,28 +131,28 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(7)万网域名解析到Github Pages</title>
+    <title>Hexo在GitHub中搭建博客系统(7)万网域名解析到GitHub Pages</title>
     <link href="http://chwshuang.github.io/2016/08/24/10007/"/>
     <id>http://chwshuang.github.io/2016/08/24/10007/</id>
     <published>2016-08-24T02:48:18.000Z</published>
-    <updated>2016-08-26T10:53:44.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
-    <content type="html"><![CDATA[<p>&#x5728;&#x4E07;&#x7F51;&#x4E0A;&#x4E70;&#x57DF;&#x540D;&#x662F;&#x76F8;&#x5BF9;&#x4FBF;&#x5B9C;&#x7684;,&#x5982;&#x4F55;&#x76F4;&#x63A5;&#x5C06;&#x57DF;&#x540D;&#x6307;&#x5411;Github Pages&#x5462;?</p>
+    <content type="html"><![CDATA[<p>&#x5728;&#x4E07;&#x7F51;&#x4E0A;&#x4E70;&#x57DF;&#x540D;&#x662F;&#x76F8;&#x5BF9;&#x4FBF;&#x5B9C;&#x7684;,&#x5982;&#x4F55;&#x76F4;&#x63A5;&#x5C06;&#x57DF;&#x540D;&#x6307;&#x5411;GitHub Pages&#x5462;?</p>
 <h1 id="&#x4E00;&#x3001;&#x8D2D;&#x4E70;&#x57DF;&#x540D;"><a href="#&#x4E00;&#x3001;&#x8D2D;&#x4E70;&#x57DF;&#x540D;" class="headerlink" title="&#x4E00;&#x3001;&#x8D2D;&#x4E70;&#x57DF;&#x540D;"></a>&#x4E00;&#x3001;&#x8D2D;&#x4E70;&#x57DF;&#x540D;</h1><h2 id="&#x9009;&#x57DF;&#x540D;"><a href="#&#x9009;&#x57DF;&#x540D;" class="headerlink" title="&#x9009;&#x57DF;&#x540D;"></a>&#x9009;&#x57DF;&#x540D;</h2><p>&#x767B;&#x5F55;<a href="https://wanwang.aliyun.com/" target="_blank" rel="external">&#x963F;&#x91CC;&#x4E91;&#x4E07;&#x7F51;</a>,&#x6839;&#x636E;&#x4F60;&#x81EA;&#x5DF1;&#x60F3;&#x597D;&#x7684;&#x57DF;&#x540D;&#x53BB;&#x67E5;&#x8BE2;&#x90A3;&#x4E9B;&#x7F51;&#x7AD9;&#x53EF;&#x4EE5;&#x8D2D;&#x4E70;&#x3002;<br>&#x5982;&#x679C;&#x662F;&#x4E2A;&#x4EBA;&#x7F51;&#x7AD9;,&#x4E00;&#x822C;&#x4EE5;&#x59D3;&#x540D;&#x5168;&#x62FC;&#x8FDB;&#x884C;&#x6CE8;&#x518C;,&#x62FC;&#x97F3;&#x7B80;&#x5199;&#x5C31;&#x522B;&#x8003;&#x8651;&#x4E86;,&#x73B0;&#x5728;&#x7684;&#x57DF;&#x540D;&#x8D29;&#x5B50;&#x57FA;&#x672C;&#x4E0A;&#x628A;&#x524D;&#x4E94;&#x4F4D;&#x5B57;&#x7B26;&#x7684;&#x57DF;&#x540D;&#x4E70;&#x5B8C;&#x4E86;&#x3002;<br>&#x76EE;&#x524D;.com&#x57DF;&#x540D;&#x57FA;&#x672C;&#x88AB;&#x4E70;&#x6CA1;&#x4E86;,&#x53EF;&#x9009;&#x7684;&#x4E00;&#x822C;&#x6709;.site&#x3001;.me&#x3001;.vip</p>
 <h2 id="&#x8D2D;&#x4E70;"><a href="#&#x8D2D;&#x4E70;" class="headerlink" title="&#x8D2D;&#x4E70;"></a>&#x8D2D;&#x4E70;</h2><p>&#x9009;&#x597D;&#x7F51;&#x7AD9;&#x540E;&#x52A0;&#x5165;&#x8D2D;&#x7269;&#x8F66;,&#x7136;&#x540E;&#x901A;&#x8FC7;&#x652F;&#x4ED8;&#x5B9D;&#x4ED8;&#x6B3E;,&#x5F53;&#x7136;,&#x4F60;&#x53EF;&#x4EE5;&#x9009;&#x62E9;&#x94F6;&#x884C;&#x5361;&#x6216;&#x8005;&#x5176;&#x4ED6;&#x65B9;&#x5F0F;<br>&#x8D2D;&#x4E70;&#x7684;&#x8FC7;&#x7A0B;&#x9700;&#x8981;&#x767B;&#x5F55;&#x4E07;&#x7F51;,&#x4F60;&#x8FD8;&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x6DD8;&#x5B9D;&#x8D26;&#x53F7;&#x767B;&#x5F55;<br>&#x4ED8;&#x6B3E;&#x5B8C;&#x6210;&#x540E;,&#x5C31;&#x53EF;&#x4EE5;&#x76F4;&#x63A5;&#x767B;&#x5F55;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E86;  </p>
-<h1 id="&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;"><a href="#&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;" class="headerlink" title="&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;"></a>&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;</h1><p>&#x5728;&#x963F;&#x91CC;&#x4E91;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E2D;,&#x9009;&#x62E9;&#x3010;&#x57DF;&#x540D;&#x3011;&#x300B;&#x3010;&#x57DF;&#x540D;&#x5217;&#x8868;&#x3011;&#x300B;&#x3010;&#x5168;&#x90E8;&#x57DF;&#x540D;&#x3011;&#x4E2D;&#x521A;&#x521A;&#x8D2D;&#x4E70;&#x7684;&#x57DF;&#x540D;,&#x70B9;&#x51FB;&#x89E3;&#x6790;&#x6309;&#x94AE;<br>&#x8FD9;&#x65F6;&#x4F1A;&#x63D0;&#x9192;&#x4F60;&#x9009;&#x62E9;&#x89E3;&#x6790;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x4E3B;&#x673A;,&#x6216;&#x8005;&#x5176;&#x4ED6;&#x4E3B;&#x673A;,&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x5C06;&#x4F60;&#x5728;Github&#x4E0A;&#x521B;&#x5EFA;&#x7684;Github Pages&#x7684;&#x57DF;&#x540D; xxx.github.io&#x8FDB;&#x884C;&#x67E5;&#x8BE2;,&#x5F97;&#x5230;&#x4E00;&#x4E2A;IP&#x5730;&#x5740;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">admindeMacBook-Pro:blog admin$ ping xxx.github.io</div><div class="line">PING prod.github.map.fastlylb.net (151.101.100.133): 56 data bytes</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 0</div><div class="line">64 bytes from 151.101.100.133: icmp_seq=1 ttl=47 time=69.632 ms</div></pre></td></tr></table></figure></p>
+<h1 id="&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;"><a href="#&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;" class="headerlink" title="&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;"></a>&#x4E8C;&#x3001;&#x57DF;&#x540D;&#x89E3;&#x6790;</h1><p>&#x5728;&#x963F;&#x91CC;&#x4E91;&#x7BA1;&#x7406;&#x63A7;&#x5236;&#x53F0;&#x4E2D;,&#x9009;&#x62E9;&#x3010;&#x57DF;&#x540D;&#x3011;&#x300B;&#x3010;&#x57DF;&#x540D;&#x5217;&#x8868;&#x3011;&#x300B;&#x3010;&#x5168;&#x90E8;&#x57DF;&#x540D;&#x3011;&#x4E2D;&#x521A;&#x521A;&#x8D2D;&#x4E70;&#x7684;&#x57DF;&#x540D;,&#x70B9;&#x51FB;&#x89E3;&#x6790;&#x6309;&#x94AE;<br>&#x8FD9;&#x65F6;&#x4F1A;&#x63D0;&#x9192;&#x4F60;&#x9009;&#x62E9;&#x89E3;&#x6790;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x4E3B;&#x673A;,&#x6216;&#x8005;&#x5176;&#x4ED6;&#x4E3B;&#x673A;,&#x8FD9;&#x65F6;&#x9700;&#x8981;&#x5C06;&#x4F60;&#x5728;GitHub&#x4E0A;&#x521B;&#x5EFA;&#x7684;GitHub Pages&#x7684;&#x57DF;&#x540D; xxx.github.io&#x8FDB;&#x884C;&#x67E5;&#x8BE2;,&#x5F97;&#x5230;&#x4E00;&#x4E2A;IP&#x5730;&#x5740;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">admindeMacBook-Pro:blog admin$ ping xxx.github.io</div><div class="line">PING prod.github.map.fastlylb.net (151.101.100.133): 56 data bytes</div><div class="line">Request timeout <span class="keyword">for</span> icmp_seq 0</div><div class="line">64 bytes from 151.101.100.133: icmp_seq=1 ttl=47 time=69.632 ms</div></pre></td></tr></table></figure></p>
 <p>&#x4ECE;ping&#x6307;&#x4EE4;&#x5F97;&#x5230;&#x4E00;&#x4E2A;IP&#x5730;&#x5740; 151.101.100.133, &#x5C06;&#x8FD9;&#x4E2A;IP&#x5730;&#x5740;&#x8BB0;&#x5F55;&#x4E0B;&#x6765;<br>&#x8FDB;&#x5165;&#x4E07;&#x7F51;&#x3010;&#x57DF;&#x540D;&#x63A7;&#x5236;&#x53F0;&#x3011;&#x300B;&#x3010;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x3011;&#x6807;&#x7B7E;,&#x9009;&#x62E9;&#x3010;&#x89E3;&#x6790;&#x8BBE;&#x7F6E;&#x3011;,<br>&#x70B9;&#x51FB;&#x3010;&#x6DFB;&#x52A0;&#x8BBE;&#x7F6E;&#x3011;,&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x4E3A;A,&#x4E3B;&#x673A;&#x8BB0;&#x5F55;&#x4E3A;www,&#x89E3;&#x6790;&#x7EBF;&#x8DEF;&#x9ED8;&#x8BA4;,&#x8BB0;&#x5F55;&#x503C;&#x4E3A;151.101.100.133&#x7684;&#x8BB0;&#x5F55;<br>&#x70B9;&#x51FB;&#x3010;&#x6DFB;&#x52A0;&#x8BBE;&#x7F6E;&#x3011;,&#x518D;&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;&#x8BB0;&#x5F55;&#x7C7B;&#x578B;&#x4E3A;A,&#x4E3B;&#x673A;&#x8BB0;&#x5F55;&#x4E3A;@,&#x89E3;&#x6790;&#x7EBF;&#x8DEF;&#x9ED8;&#x8BA4;,&#x8BB0;&#x5F55;&#x503C;&#x4E3A;151.101.100.133&#x7684;&#x8BB0;&#x5F55;<br><img src="/2016/08/24/10007/aliyun.jpg" alt="&#x4E07;&#x7F51;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x754C;&#x9762;"></p>
-<h1 id="&#x4E09;&#x3001;Github&#x89E3;&#x6790;"><a href="#&#x4E09;&#x3001;Github&#x89E3;&#x6790;" class="headerlink" title="&#x4E09;&#x3001;Github&#x89E3;&#x6790;"></a>&#x4E09;&#x3001;Github&#x89E3;&#x6790;</h1><p>&#x5728;Github&#x7684;xxx.github.io&#x9879;&#x76EE;,&#x8FDB;&#x5165;&#x3010;Settings&#x3011;&#x6807;&#x7B7E;&#x9875;,&#x5728;&#x3010;Custom domain&#x3011;&#x529F;&#x80FD;&#x4E2D;,&#x5C06;&#x521A;&#x521A;&#x7533;&#x8BF7;&#x7684;&#x57DF;&#x540D;&#x5199;&#x8FDB;&#x53BB;<br><img src="/2016/08/24/10007/domain.jpg" alt="Github&#x81EA;&#x5B9A;&#x4E49;&#x57DF;&#x540D;&#x754C;&#x9762;"></p>
-<p>Github&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;,&#x7B49;&#x51E0;&#x5206;&#x949F;,&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#x521A;&#x521A;&#x8D2D;&#x4E70;&#x7684;&#x57DF;&#x540D;,&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x521A;&#x521A;Github&#x4E0A;&#x7684;&#x7F51;&#x7AD9;&#x4E86;!</p>
+<h1 id="&#x4E09;&#x3001;GitHub&#x89E3;&#x6790;"><a href="#&#x4E09;&#x3001;GitHub&#x89E3;&#x6790;" class="headerlink" title="&#x4E09;&#x3001;GitHub&#x89E3;&#x6790;"></a>&#x4E09;&#x3001;GitHub&#x89E3;&#x6790;</h1><p>&#x5728;GitHub&#x7684;xxx.github.io&#x9879;&#x76EE;,&#x8FDB;&#x5165;&#x3010;Settings&#x3011;&#x6807;&#x7B7E;&#x9875;,&#x5728;&#x3010;Custom domain&#x3011;&#x529F;&#x80FD;&#x4E2D;,&#x5C06;&#x521A;&#x521A;&#x7533;&#x8BF7;&#x7684;&#x57DF;&#x540D;&#x5199;&#x8FDB;&#x53BB;<br><img src="/2016/08/24/10007/domain.jpg" alt="GitHub&#x81EA;&#x5B9A;&#x4E49;&#x57DF;&#x540D;&#x754C;&#x9762;"></p>
+<p>GitHub&#x8BBE;&#x7F6E;&#x5B8C;&#x6210;,&#x7B49;&#x51E0;&#x5206;&#x949F;,&#x5728;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;&#x521A;&#x521A;&#x8D2D;&#x4E70;&#x7684;&#x57DF;&#x540D;,&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x521A;&#x521A;GitHub&#x4E0A;&#x7684;&#x7F51;&#x7AD9;&#x4E86;!</p>
 ]]></content>
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(7)万网域名解析到Github Pages
+      Hexo在GitHub中搭建博客系统(7)万网域名解析到GitHub Pages
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -160,11 +160,11 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(6)异常处理</title>
+    <title>Hexo在GitHub中搭建博客系统(6)异常处理</title>
     <link href="http://chwshuang.github.io/2016/08/24/10006/"/>
     <id>http://chwshuang.github.io/2016/08/24/10006/</id>
     <published>2016-08-24T02:48:08.000Z</published>
-    <updated>2016-08-26T10:53:44.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="&#x5F02;&#x5E38;"><a href="#&#x5F02;&#x5E38;" class="headerlink" title="&#x5F02;&#x5E38;"></a>&#x5F02;&#x5E38;</h1><p>&#x8FD9;&#x91CC;&#x4E3B;&#x8981;&#x6536;&#x96C6;Hexo&#x5728;&#x642D;&#x5EFA;&#x535A;&#x5BA2;&#x7684;&#x65F6;&#x5019;&#x51FA;&#x73B0;&#x7684;&#x5F02;&#x5E38;&#x4EE5;&#x53CA;&#x5904;&#x7406;&#x65B9;&#x6848;</p>
 <p>&#x5728;&#x8FDB;&#x884C;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;&#x6A21;&#x62DF;&#x67E5;&#x770B;&#x65F6;hexo s &#x2013;debug&#x51FA;&#x73B0;&#x7684;&#x542F;&#x52A8;&#x5F02;&#x5E38;</p>
@@ -195,16 +195,16 @@
 </table>
 <h3 id="3-3-&#x89E3;&#x51B3;&#x65B9;&#x6848;"><a href="#3-3-&#x89E3;&#x51B3;&#x65B9;&#x6848;" class="headerlink" title="3.3 &#x89E3;&#x51B3;&#x65B9;&#x6848;"></a>3.3 &#x89E3;&#x51B3;&#x65B9;&#x6848;</h3><p>&#x53EF;&#x4EE5;&#x53C2;&#x8003;<a href="../10005">Markdown&#x8BED;&#x6CD5;&#x7B2C;(0)&#x7AE0;-&#x7279;&#x6B8A;&#x5B57;&#x7B26;</a><br>&#x5C06;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x901A;&#x8FC7;&#x8F6C;&#x4E49;&#x8FDB;&#x884C;&#x8F6C;&#x6362;<br>&#x5F53;&#x7136;,&#x6700;&#x597D;&#x7684;&#x65B9;&#x6848;&#x662F;&#x907F;&#x514D;&#x5199;&#x7279;&#x6B8A;&#x5B57;&#x7B26;</p>
 <hr>
-<p><a href="../10007">&#x4E0B;&#x4E00;&#x8282;:&#x4E07;&#x7F51;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;Github Pages</a></p>
+<p><a href="../10007">&#x4E0B;&#x4E00;&#x8282;:&#x4E07;&#x7F51;&#x57DF;&#x540D;&#x89E3;&#x6790;&#x5230;GitHub Pages</a></p>
 ]]></content>
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(6)异常处理
+      Hexo在GitHub中搭建博客系统(6)异常处理
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -212,11 +212,11 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(5)Markdown语法</title>
+    <title>Hexo在GitHub中搭建博客系统(5)Markdown语法</title>
     <link href="http://chwshuang.github.io/2016/08/24/10005/"/>
     <id>http://chwshuang.github.io/2016/08/24/10005/</id>
     <published>2016-08-24T02:38:58.000Z</published>
-    <updated>2016-08-26T06:04:44.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
     <content type="html"><![CDATA[<p>   &#x524D;&#x9762;&#x6211;&#x4EEC;&#x5DF2;&#x7ECF;&#x77E5;&#x9053;&#x600E;&#x4E48;&#x642D;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#x3001;&#x53D1;&#x5E03;&#x3001;&#x521B;&#x5EFA;&#x6587;&#x7AE0;,&#x73B0;&#x5728;&#x5230;&#x4E86;&#x521B;&#x5EFA;&#x5185;&#x5BB9;&#x7684;&#x65F6;&#x5019;,&#x9700;&#x8981;&#x719F;&#x7EC3;&#x638C;&#x63E1;Markdown&#x7684;&#x8BED;&#x6CD5;</p>
 <h1 id="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"><a href="#&#x57FA;&#x672C;&#x8BED;&#x6CD5;" class="headerlink" title="&#x57FA;&#x672C;&#x8BED;&#x6CD5;"></a>&#x57FA;&#x672C;&#x8BED;&#x6CD5;</h1><h2 id="0-&#x7279;&#x6B8A;&#x5B57;&#x7B26;"><a href="#0-&#x7279;&#x6B8A;&#x5B57;&#x7B26;" class="headerlink" title="(0) &#x7279;&#x6B8A;&#x5B57;&#x7B26;"></a>(0) &#x7279;&#x6B8A;&#x5B57;&#x7B26;</h2><p>&#x4E4B;&#x6240;&#x4EE5;&#x628A;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x653E;&#x5230;&#x6700;&#x524D;&#x9762;,&#x5C31;&#x662F;&#x56E0;&#x4E3A;Markdown&#x5BF9;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x5904;&#x7406;&#x4E0D;&#x662F;&#x5F88;&#x53CB;&#x597D;,&#x5F88;&#x5BB9;&#x6613;&#x51FA;&#x73B0;&#x5F88;&#x5947;&#x602A;&#x7684;&#x5F02;&#x5E38;,&#x5176;&#x5B9E;&#x5C31;&#x662F;&#x56E0;&#x4E3A;&#x6587;&#x7AE0;&#x4E2D;&#x5305;&#x542B;&#x4E86;&#x7279;&#x6B8A;&#x5B57;&#x7B26;&#x65E0;&#x6CD5;&#x7F16;&#x8BD1;&#x901A;&#x8FC7;&#x5BFC;&#x81F4;Hexo&#x65E0;&#x6CD5;&#x6E32;&#x67D3;<br>&#x5728;&#x5199;&#x535A;&#x5BA2;&#x65F6;,&#x4E00;&#x5B9A;&#x6CE8;&#x610F;&#x4E0D;&#x8981;&#x5199;&#x8FD9;&#x4E9B;&#x5B57;&#x7B26;,&#x5982;&#x679C;&#x8981;&#x5199;,&#x5C31;&#x8FDB;&#x884C;&#x8F6C;&#x4E49;<br>&#x6709;&#x4E9B;&#x4EBA;&#x53EF;&#x80FD;&#x8BF4;&#x53EF;&#x4EE5;&#x4F7F;&#x7528;&#x53CD;&#x659C;&#x6760; \ &#x6765;&#x5904;&#x7406;,&#x6211;&#x8FD9;&#x91CC;&#x4E0D;&#x5EFA;&#x8BAE;,&#x56E0;&#x4E3A;&#x6211;&#x4F7F;&#x7528;&#x7684;&#x65F6;&#x5019;&#x6CA1;&#x6709;&#x89E3;&#x51B3;&#x95EE;&#x9898;&#x3002;<br>&#x4E0B;&#x9762;&#x662F;&#x6BD4;&#x8F83;&#x5E38;&#x89C1;&#x7684;&#x51E0;&#x4E2A;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div></pre></td><td class="code"><pre><div class="line">! &amp;#33; &#x2014; &#x60CA;&#x53F9;&#x53F7;Exclamation mark </div><div class="line">&#x201D; &amp;#34; &amp;quot; &#x53CC;&#x5F15;&#x53F7;Quotation mark </div><div class="line"># &amp;#35; &#x2014; &#x6570;&#x5B57;&#x6807;&#x5FD7;Number sign </div><div class="line">$ &amp;#36; &#x2014; &#x7F8E;&#x5143;&#x6807;&#x5FD7;Dollar sign </div><div class="line">% &amp;#37; &#x2014; &#x767E;&#x5206;&#x53F7;Percent sign </div><div class="line">&amp; &amp;#38; &amp;amp; Ampersand </div><div class="line">&#x2018; &amp;#39; &#x2014; &#x5355;&#x5F15;&#x53F7;Apostrophe </div><div class="line">( &amp;#40; &#x2014; &#x5C0F;&#x62EC;&#x53F7;&#x5DE6;&#x8FB9;&#x90E8;&#x5206;Left parenthesis </div><div class="line">) &amp;#41; &#x2014; &#x5C0F;&#x62EC;&#x53F7;&#x53F3;&#x8FB9;&#x90E8;&#x5206;Right parenthesis </div><div class="line">* &amp;#42; &#x2014; &#x661F;&#x53F7;Asterisk </div><div class="line">+ &amp;#43; &#x2014; &#x52A0;&#x53F7;Plus sign </div><div class="line">&lt; &amp;#60; &amp;lt; &#x5C0F;&#x4E8E;&#x53F7;Less than </div><div class="line">= &amp;#61; &#x2014; &#x7B49;&#x4E8E;&#x7B26;&#x53F7;Equals sign </div><div class="line">&gt; &amp;#62; &amp;gt; &#x5927;&#x4E8E;&#x53F7;Greater than </div><div class="line">? &amp;#63; &#x2014; &#x95EE;&#x53F7;Question mark </div><div class="line">@ &amp;#64; &#x2014; Commercial at </div><div class="line">[ &amp;#91; --- &#x4E2D;&#x62EC;&#x53F7;&#x5DE6;&#x8FB9;&#x90E8;&#x5206;Left square bracket </div><div class="line">\ &amp;#92; --- &#x53CD;&#x659C;&#x6760;Reverse solidus (backslash) </div><div class="line">] &amp;#93; &#x2014; &#x4E2D;&#x62EC;&#x53F7;&#x53F3;&#x8FB9;&#x90E8;&#x5206;Right square bracket </div><div class="line">{ &amp;#123; &#x2014; &#x5927;&#x62EC;&#x53F7;&#x5DE6;&#x8FB9;&#x90E8;&#x5206;Left curly brace </div><div class="line">| &amp;#124; &#x2014; &#x7AD6;&#x7EBF;Vertical bar </div><div class="line">} &amp;#125; &#x2014; &#x5927;&#x62EC;&#x53F7;&#x53F3;&#x8FB9;&#x90E8;&#x5206;Right curly brace</div></pre></td></tr></table></figure></p>
@@ -300,11 +300,11 @@
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(5)Markdown语法
+      Hexo在GitHub中搭建博客系统(5)Markdown语法
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -312,11 +312,11 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(4)建菜单写文章</title>
+    <title>Hexo在GitHub中搭建博客系统(4)建菜单写文章</title>
     <link href="http://chwshuang.github.io/2016/08/24/10004/"/>
     <id>http://chwshuang.github.io/2016/08/24/10004/</id>
     <published>2016-08-24T02:38:48.000Z</published>
-    <updated>2016-08-26T06:02:49.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
     <content type="html"><![CDATA[<p>&#x5728;Hexo&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;&#x4E2D;, &#x53EF;&#x4EE5;&#x521B;&#x5EFA;&#x83DC;&#x5355;&#x3001;&#x6587;&#x7AE0;&#x3001;&#x5206;&#x7C7B;&#x3001;&#x6807;&#x7B7E;&#x3002;&#x5728;&#x6211;&#x4EEC;&#x7684;&#x4E3B;&#x9898;&#x4E2D;,&#x83DC;&#x5355;&#x548C;&#x6587;&#x7AE0;&#x9700;&#x8981;&#x624B;&#x52A8;&#x521B;&#x5EFA;,&#x800C;&#x5206;&#x7C7B;&#x548C;&#x6807;&#x7B7E;&#x4E0D;&#x7528;&#x624B;&#x52A8;&#x521B;&#x5EFA;,</p>
 <h1 id="&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x83DC;&#x5355;"><a href="#&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x83DC;&#x5355;" class="headerlink" title="&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x83DC;&#x5355;"></a>&#x4E00;&#x3001;&#x521B;&#x5EFA;&#x83DC;&#x5355;</h1><p>&#x5728;blog&#x76EE;&#x5F55;&#x521B;&#x5EFA;&#x4E00;&#x4E2A;&#x65B0;&#x7684;&#x83DC;&#x5355;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo new page <span class="string">&quot;github&quot;</span></div><div class="line">INFO  Created: ~/blog/<span class="built_in">source</span>/github/index.md</div></pre></td></tr></table></figure></p>
@@ -326,7 +326,7 @@
 <figure class="highlight xml"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div></pre></td><td class="code"><pre><div class="line">16 menu:</div><div class="line">17   - page: home</div><div class="line">18     directory: .</div><div class="line">19     icon: fa-home</div><div class="line">20   - page: archive</div><div class="line">21     directory: archives/</div><div class="line">22     icon: fa-archive</div><div class="line">23   - page: about</div><div class="line">24     directory: about/</div><div class="line">25     icon: fa-user</div><div class="line">26   - page: github</div><div class="line">27     directory: github/</div><div class="line">28     icon: fa-github-alt</div><div class="line">29   - page: rss</div><div class="line">30     directory: atom.xml</div><div class="line">31     icon: fa-rss</div></pre></td></tr></table></figure>
 <p><em>&#x5982;&#x679C;&#x4F60;&#x5BF9;&#x6807;&#x7B7E;&#x9875;&#x7684;&#x5C0F;&#x56FE;&#x6807;&#x4E0D;&#x6EE1;&#x610F;,&#x4E5F;&#x53EF;&#x4EE5;&#x81EA;&#x5DF1;&#x5B9A;&#x4E49;,&#x8FD9;&#x4E2A;&#x56FE;&#x6807;&#x5176;&#x5B9E;&#x662F;&#x4E00;&#x79CD;&#x5B57;&#x4F53;,&#x5728;<a href="http://fontawesome.io/icons/" target="_blank" rel="external">fontawesome.io</a> &#x8FD9;&#x4E2A;&#x7F51;&#x7AD9;&#x53EF;&#x4EE5;&#x627E;&#x5230;&#x4F60;&#x6EE1;&#x610F;&#x7684;&#x56FE;&#x6807;&#x3002;<br>&#x4FEE;&#x6539;&#x65B9;&#x6CD5;&#x5C31;&#x662F;&#x5C06;icon: &#x540E;&#x9762;&#x7684;&#x5185;&#x5BB9;&#x66FF;&#x6362;&#x6389;</em></p>
 <p>&#x6E05;&#x7406;&#x540E;&#x542F;&#x52A8;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo s --debug</div></pre></td></tr></table></figure></p>
-<p>&#x83DC;&#x5355;&#x6DFB;&#x52A0;&#x6210;&#x529F;<br><img src="/2016/08/24/10004/img/tags.png" alt="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;Github&#x6807;&#x7B7E;&#x9875;"></p>
+<p>&#x83DC;&#x5355;&#x6DFB;&#x52A0;&#x6210;&#x529F;<br><img src="/2016/08/24/10004/img/tags.png" alt="&#x6DFB;&#x52A0;&#x4E00;&#x4E2A;GitHub&#x6807;&#x7B7E;&#x9875;"></p>
 <h1 id="&#x4E8C;&#x3001;&#x5199;&#x6587;&#x7AE0;"><a href="#&#x4E8C;&#x3001;&#x5199;&#x6587;&#x7AE0;" class="headerlink" title="&#x4E8C;&#x3001;&#x5199;&#x6587;&#x7AE0;"></a>&#x4E8C;&#x3001;&#x5199;&#x6587;&#x7AE0;</h1><p>&#x5728;blog&#x76EE;&#x5F55;&#x4E0B;&#x6267;&#x884C;&#x521B;&#x5EFA;&#x6587;&#x7AE0;&#x6307;&#x4EE4;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo new <span class="string">&quot;blog1&quot;</span></div><div class="line">INFO  Created: ~/blog/<span class="built_in">source</span>/_posts/blog1.md</div></pre></td></tr></table></figure></p>
 <p>&#x7136;&#x540E;&#x4FEE;&#x6539;source/_posts/blog1.md&#x6587;&#x4EF6;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">$ vim source/_posts/blog1.md</div><div class="line">  1 ---</div><div class="line">  2 title: blog1</div><div class="line">  3 date: 2016-08-25 18:50:03</div><div class="line">  4 tags:</div><div class="line">  5 ---</div><div class="line">  6 </div><div class="line">  7 &#x6211;&#x7684;&#x7B2C;&#x4E00;&#x7BC7;&#x6587;&#x7AE0;&#xFF01;</div></pre></td></tr></table></figure></p>
 <p>&#x6E05;&#x7406;&#x540E;&#x542F;&#x52A8;,&#x5C31;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x535A;&#x5BA2;&#x4E2D;&#x65B0;&#x589E;&#x52A0;&#x7684;&#x6587;&#x7AE0;&#x4E86;&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">$ hexo clean</div><div class="line">$ hexo s --debug</div></pre></td></tr></table></figure></p>
@@ -347,11 +347,11 @@
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(4)建菜单写文章
+      Hexo在GitHub中搭建博客系统(4)建菜单写文章
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -359,21 +359,21 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(3)Hexo安装主题</title>
+    <title>Hexo在GitHub中搭建博客系统(3)Hexo安装主题</title>
     <link href="http://chwshuang.github.io/2016/08/24/10003/"/>
     <id>http://chwshuang.github.io/2016/08/24/10003/</id>
     <published>2016-08-24T02:38:38.000Z</published>
-    <updated>2016-08-26T06:02:45.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
     <content type="html"><![CDATA[<h1 id="&#x4E00;&#x3001;&#x627E;&#x5230;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4E3B;&#x9898;"><a href="#&#x4E00;&#x3001;&#x627E;&#x5230;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4E3B;&#x9898;" class="headerlink" title="&#x4E00;&#x3001;&#x627E;&#x5230;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4E3B;&#x9898;"></a>&#x4E00;&#x3001;&#x627E;&#x5230;&#x4F60;&#x559C;&#x6B22;&#x7684;&#x4E3B;&#x9898;</h1><p>&#x5728;<a href="https://hexo.io/themes/" target="_blank" rel="external">Hexo&#x4E3B;&#x9898; ( https://hexo.io/themes/ )</a>&#x9875;&#x9762;,&#x4F60;&#x53EF;&#x4EE5;&#x6B23;&#x8D4F;&#x5230;&#x5F88;&#x591A;&#x5F88;&#x4F18;&#x79C0;&#x7684;&#x4E3B;&#x9898;,&#x4ED6;&#x4EEC;&#x5B9E;&#x5728;&#x662F;&#x592A;&#x9177;&#x4E86;!<br><img src="/2016/08/24/10003/img/themes.jpg" alt="&#x4E3B;&#x9898;&#x5217;&#x8868;"></p>
-<h1 id="&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;"><a href="#&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;" class="headerlink" title="&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;"></a>&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;</h1><p>&#x5982;&#x679C;&#x4F60;&#x70B9;&#x51FB;&#x56FE;&#x7247;,&#x5C31;&#x4F1A;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;&#x7684;&#x535A;&#x5BA2;,&#x770B;&#x5230;&#x5B9E;&#x9645;&#x7684;&#x6548;&#x679C;<br>&#x5982;&#x679C;&#x4F60;&#x8981;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;,&#x5C31;&#x70B9;&#x51FB;&#x4E3B;&#x9898;&#x6587;&#x5B57;,&#x8FDB;&#x5165;&#x4E3B;&#x9898;Github&#x9875;&#x9762;,&#x7136;&#x540E;&#x590D;&#x5236;&#x4E0B;&#x8F7D;&#x5730;&#x5740;<br><img src="/2016/08/24/10003/img/clone.jpg" alt="&#x590D;&#x5236;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"></p>
+<h1 id="&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;"><a href="#&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;" class="headerlink" title="&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;"></a>&#x4E8C;&#x3001;&#x4E0B;&#x8F7D;&#x4E3B;&#x9898;</h1><p>&#x5982;&#x679C;&#x4F60;&#x70B9;&#x51FB;&#x56FE;&#x7247;,&#x5C31;&#x4F1A;&#x8DF3;&#x5230;&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;&#x7684;&#x535A;&#x5BA2;,&#x770B;&#x5230;&#x5B9E;&#x9645;&#x7684;&#x6548;&#x679C;<br>&#x5982;&#x679C;&#x4F60;&#x8981;&#x4E0B;&#x8F7D;&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;,&#x5C31;&#x70B9;&#x51FB;&#x4E3B;&#x9898;&#x6587;&#x5B57;,&#x8FDB;&#x5165;&#x4E3B;&#x9898;GitHub&#x9875;&#x9762;,&#x7136;&#x540E;&#x590D;&#x5236;&#x4E0B;&#x8F7D;&#x5730;&#x5740;<br><img src="/2016/08/24/10003/img/clone.jpg" alt="&#x590D;&#x5236;&#x4E0B;&#x8F7D;&#x5730;&#x5740;"></p>
 <h2 id="&#x4E0B;&#x8F7D;"><a href="#&#x4E0B;&#x8F7D;" class="headerlink" title="&#x4E0B;&#x8F7D;"></a>&#x4E0B;&#x8F7D;</h2><p>&#x8FDB;&#x5165;blog&#x76EE;&#x5F55;,&#x514B;&#x9686;&#x4E3B;&#x9898;&#x5230;&#x672C;&#x5730;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ git <span class="built_in">clone</span> https://github.com/tufu9441/maupassant-hexo.git themes/maupassant</div></pre></td></tr></table></figure></p>
 <h1 id="&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x4E3B;&#x9898;"><a href="#&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x4E3B;&#x9898;" class="headerlink" title="&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x4E3B;&#x9898;"></a>&#x4E09;&#x3001;&#x5B89;&#x88C5;&#x4E3B;&#x9898;</h1><h2 id="1-&#x5B89;&#x88C5;"><a href="#1-&#x5B89;&#x88C5;" class="headerlink" title="(1) &#x5B89;&#x88C5;"></a>(1) &#x5B89;&#x88C5;</h2><p>&#x4FEE;&#x6539;blog&#x6839;&#x76EE;&#x5F55;&#x7684;_config.yml,&#x5C06;theme&#x4FEE;&#x6539;&#x4E3A;alpha  </p>
 <p><em>&#x6CE8;&#x610F;: &#x67D0;&#x4E9B;&#x4E3B;&#x9898;&#x53EF;&#x80FD;&#x9700;&#x8981;&#x5B89;&#x88C5;Node.js&#x7684;&#x63D2;&#x4EF6;,&#x5728;&#x5B89;&#x88C5;&#x4E3B;&#x9898;&#x65F6;,&#x6700;&#x597D;&#x5728;&#x4E3B;&#x9898;&#x7684;Githu&#x4E3B;&#x9875;&#x770B;&#x770B;&#x5B89;&#x88C5;&#x6B65;&#x9AA4;</em></p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div><div class="line">...</div><div class="line"></div><div class="line"> 63 <span class="comment"># Extensions</span></div><div class="line"> 64 <span class="comment">## Plugins: https://hexo.io/plugins/</span></div><div class="line"> 65 <span class="comment">## Themes: https://hexo.io/themes/</span></div><div class="line"> 66 theme: maupassant</div></pre></td></tr></table></figure>
 <p>&#x8FD9;&#x4E2A;&#x4E3B;&#x9898;&#x4F9D;&#x8D56;jade&#x548C;sass&#x63D2;&#x4EF6;,&#x6240;&#x4EE5;&#x5728;&#x914D;&#x7F6E;&#x597D;&#x4E3B;&#x9898;&#x540E;,&#x8FD8;&#x8981;&#x8FDB;&#x884C;&#x5B89;&#x88C5;&#x63D2;&#x4EF6;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-renderer-jade --save</div><div class="line">...</div><div class="line">$ npm install hexo-renderer-sass --save</div></pre></td></tr></table></figure></p>
 <h2 id="2-&#x67E5;&#x770B;"><a href="#2-&#x67E5;&#x770B;" class="headerlink" title="(2) &#x67E5;&#x770B;"></a>(2) &#x67E5;&#x770B;</h2><p>&#x5148;&#x6E05;&#x7A7A;&#x7F13;&#x5B58;,&#x7136;&#x540E;&#x542F;&#x52A8;&#x670D;&#x52A1;&#x5668;,&#x5728;&#x672C;&#x5730;&#x6D4F;&#x89C8;&#x5668;&#x8F93;&#x5165;<a href="http://localhost:4000/." target="_blank" rel="external">localhost:4000/</a>&#x67E5;&#x770B;&#x6548;&#x679C;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">$ hexo clean </div><div class="line"></div><div class="line">$ hexo s --debug</div></pre></td></tr></table></figure></p>
-<h2 id="3-&#x81EA;&#x5B9A;&#x4E49;"><a href="#3-&#x81EA;&#x5B9A;&#x4E49;" class="headerlink" title="(3) &#x81EA;&#x5B9A;&#x4E49;"></a>(3) &#x81EA;&#x5B9A;&#x4E49;</h2><p>&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x4E3B;&#x9898;&#x7684;&#x5185;&#x5BB9;,&#x53EF;&#x4EE5;&#x5728;&#x4E3B;&#x9898;&#x7684;Github&#x4E3B;&#x9875;&#x4E0A;&#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</p>
+<h2 id="3-&#x81EA;&#x5B9A;&#x4E49;"><a href="#3-&#x81EA;&#x5B9A;&#x4E49;" class="headerlink" title="(3) &#x81EA;&#x5B9A;&#x4E49;"></a>(3) &#x81EA;&#x5B9A;&#x4E49;</h2><p>&#x5982;&#x679C;&#x8981;&#x4FEE;&#x6539;&#x4E3B;&#x9898;&#x7684;&#x5185;&#x5BB9;,&#x53EF;&#x4EE5;&#x5728;&#x4E3B;&#x9898;&#x7684;GitHub&#x4E3B;&#x9875;&#x4E0A;&#x67E5;&#x770B;&#x8BE6;&#x7EC6;&#x4ECB;&#x7ECD;</p>
 <h2 id="4-&#x5F02;&#x5E38;&#x5904;&#x7406;"><a href="#4-&#x5F02;&#x5E38;&#x5904;&#x7406;" class="headerlink" title="(4) &#x5F02;&#x5E38;&#x5904;&#x7406;"></a>(4) &#x5F02;&#x5E38;&#x5904;&#x7406;</h2><p>&#x5B89;&#x88C5;sass&#x65F6;&#x5982;&#x679C;&#x7F51;&#x7EDC;&#x3001;&#x670D;&#x52A1;&#x5668;&#x7684;&#x539F;&#x56E0;,&#x53EF;&#x80FD;&#x51FA;&#x73B0;&#x5B89;&#x88C5;&#x5F02;&#x5E38;,&#x53EF;&#x4EE5;&#x67E5;&#x770B;npm-debug.log<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ more npm-debug.log</div></pre></td></tr></table></figure></p>
 <p>&#x8FD9;&#x65F6;&#x4E0D;&#x7528;&#x7740;&#x6025;,&#x53EF;&#x4EE5;&#x901A;&#x8FC7;&#x5B89;&#x88C5;&#x65E5;&#x5FD7;&#x67E5;&#x770B;&#x539F;&#x56E0;,&#x800C;&#x4E14;&#x5728;&#x65E5;&#x5FD7;&#x7684;&#x7ED3;&#x5C3E;&#x53EF;&#x4EE5;&#x770B;&#x5230;&#x4E00;&#x4E9B;&#x5EFA;&#x8BAE;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div></pre></td><td class="code"><pre><div class="line">9229 verbose cwd /Users/admin/blog</div><div class="line">9230 error Darwin 15.6.0</div><div class="line">9231 error argv &quot;/usr/local/Cellar/node/6.4.0/bin/node&quot; &quot;/usr/local/bin/npm&quot; &quot;install&quot; &quot;hexo-renderer-sass&quot; &quot;--save&quot;</div><div class="line">9232 error node v6.4.0</div><div class="line">9233 error npm  v3.10.3</div><div class="line">9234 error code ELIFECYCLE</div><div class="line">9235 error node-sass@3.8.0 postinstall: `node scripts/build.js`</div><div class="line">9235 error Exit status 1</div><div class="line">9236 error Failed at the node-sass@3.8.0 postinstall script &apos;node scripts/build.js&apos;.</div><div class="line">9236 error Make sure you have the latest version of node.js and npm installed.</div><div class="line">9236 error If you do, this is most likely a problem with the node-sass package,</div><div class="line">9236 error not with npm itself.</div><div class="line">9236 error Tell the author that this fails on your system:</div><div class="line">9236 error     node scripts/build.js</div><div class="line">9236 error You can get information on how to open an issue for this project with:</div><div class="line">9236 error     npm bugs node-sass</div><div class="line">9236 error Or if that isn&apos;t available, you can get their info via:</div><div class="line">9236 error     npm owner ls node-sass</div><div class="line">9236 error There is likely additional logging output above.</div></pre></td></tr></table></figure></p>
 <p>&#x6839;&#x636E;&#x5EFA;&#x8BAE;&#x6267;&#x884C;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm bugs node-sass</div></pre></td></tr></table></figure></p>
@@ -383,11 +383,11 @@
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(3)Hexo安装主题
+      Hexo在GitHub中搭建博客系统(3)Hexo安装主题
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -395,18 +395,18 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(2)Hexo一键发布文章到Github</title>
+    <title>Hexo在GitHub中搭建博客系统(2)Hexo一键发布文章到GitHub</title>
     <link href="http://chwshuang.github.io/2016/08/24/10002/"/>
     <id>http://chwshuang.github.io/2016/08/24/10002/</id>
     <published>2016-08-24T02:38:28.000Z</published>
-    <updated>2016-08-27T04:51:46.000Z</updated>
+    <updated>2016-08-30T02:17:26.000Z</updated>
     
-    <content type="html"><![CDATA[<h1 id="&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github"><a href="#&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github" class="headerlink" title="&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github"></a>&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github</h1><h2 id="1-&#x914D;&#x7F6E;Github"><a href="#1-&#x914D;&#x7F6E;Github" class="headerlink" title="(1) &#x914D;&#x7F6E;Github"></a>(1) &#x914D;&#x7F6E;Github</h2><p>&#x5728;blog&#x76EE;&#x5F55;,&#x6253;&#x5F00;_config.yml</p>
+    <content type="html"><![CDATA[<h1 id="&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;GitHub"><a href="#&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;GitHub" class="headerlink" title="&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;GitHub"></a>&#x4E00;&#x3001;&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;GitHub</h1><h2 id="1-&#x914D;&#x7F6E;GitHub"><a href="#1-&#x914D;&#x7F6E;GitHub" class="headerlink" title="(1) &#x914D;&#x7F6E;GitHub"></a>(1) &#x914D;&#x7F6E;GitHub</h2><p>&#x5728;blog&#x76EE;&#x5F55;,&#x6253;&#x5F00;_config.yml</p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ vim _config.yml</div></pre></td></tr></table></figure>
 <p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x6587;&#x4EF6;_config.yml&#x4E2D;deploy&#x4E0B;&#x7684;&#x5185;&#x5BB9;</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">68 # Deployment</div><div class="line">69 ## Docs: https://hexo.io/docs/deployment.html</div><div class="line">70 deploy:</div><div class="line">71   type: git</div><div class="line">72   repo: https://github.com/chwshuang/chwshuang.github.com.git</div><div class="line">73 branch: gh-pages</div></pre></td></tr></table></figure>
-<p>Github&#x90E8;&#x7F72;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BE6;&#x89E3;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:  &#x8868;&#x793A;&#x90E8;&#x7F72;&#x8BBE;&#x7F6E;</div><div class="line">type:    &#x90E8;&#x7F72;&#x7C7B;&#x578B;,&#x652F;&#x6301;git,heroku</div><div class="line">repo:    &#x90E8;&#x7F72;&#x4F4D;&#x7F6E; git&#x4ED3;&#x5E93;&#x9879;&#x76EE;&#x7684;&#x4F4D;&#x7F6E;</div><div class="line">branch:  &#x90E8;&#x7F72;&#x5230;Github&#x7684;&#x5206;&#x652F;&#x540D;&#x79F0;</div><div class="line">message: &#x81EA;&#x5B9A;&#x4E49;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</div></pre></td></tr></table></figure>
+<p>GitHub&#x90E8;&#x7F72;&#x914D;&#x7F6E;&#x53C2;&#x6570;&#x8BE6;&#x89E3;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:  &#x8868;&#x793A;&#x90E8;&#x7F72;&#x8BBE;&#x7F6E;</div><div class="line">type:    &#x90E8;&#x7F72;&#x7C7B;&#x578B;,&#x652F;&#x6301;git,heroku</div><div class="line">repo:    &#x90E8;&#x7F72;&#x4F4D;&#x7F6E; git&#x4ED3;&#x5E93;&#x9879;&#x76EE;&#x7684;&#x4F4D;&#x7F6E;</div><div class="line">branch:  &#x90E8;&#x7F72;&#x5230;GitHub&#x7684;&#x5206;&#x652F;&#x540D;&#x79F0;</div><div class="line">message: &#x81EA;&#x5B9A;&#x4E49;&#x63D0;&#x4EA4;&#x4FE1;&#x606F;</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -417,7 +417,7 @@
 <tbody>
 <tr>
 <td>repo</td>
-<td style="text-align:center">Github&#x5E93;(Repository)&#x5730;&#x5740;</td>
+<td style="text-align:center">GitHub&#x5E93;(Repository)&#x5730;&#x5740;</td>
 </tr>
 <tr>
 <td>branch</td>
@@ -435,7 +435,7 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo clean ; hexo genarate</div></pre></td></tr></table></figure>
 <p>&#x5B89;&#x88C5;&#x5B8C;&#x6210;&#x540E;&#x8FDB;&#x884C;&#x90E8;&#x7F72;  </p>
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
-<h2 id="4-&#x67E5;&#x770B;&#x7ED3;&#x679C;"><a href="#4-&#x67E5;&#x770B;&#x7ED3;&#x679C;" class="headerlink" title="(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;"></a>(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;</h2><p>&#x7136;&#x540E;&#x5230;&#x4F60;&#x7684;Github&#x4E0A;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x9875;,&#x770B;&#x770B;master&#x5206;&#x652F;&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x65B0;&#x65F6;&#x95F4;</p>
+<h2 id="4-&#x67E5;&#x770B;&#x7ED3;&#x679C;"><a href="#4-&#x67E5;&#x770B;&#x7ED3;&#x679C;" class="headerlink" title="(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;"></a>(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;</h2><p>&#x7136;&#x540E;&#x5230;&#x4F60;&#x7684;GitHub&#x4E0A;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x9875;,&#x770B;&#x770B;master&#x5206;&#x652F;&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x65B0;&#x65F6;&#x95F4;</p>
 <p><img src="/2016/08/24/10002/img/branch.jpg" alt="&#x4EE3;&#x7801;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x53D8;&#x6210;&#x521A;&#x521A;&#x63D0;&#x4EA4;&#x7684;&#x4E86;"></p>
 <h1 id="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"><a href="#&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;" class="headerlink" title="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"></a>&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h1><h2 id="1-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#1-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(1) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(1) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="external">hexo-deployer-heroku</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-heroku --save</div></pre></td></tr></table></figure></p>
 <p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
@@ -586,11 +586,11 @@
     
     <summary type="html">
     
-      Hexo在Github中搭建博客系统(2)Hexo一键发布文章到Github
+      Hexo在GitHub中搭建博客系统(2)Hexo一键发布文章到GitHub
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>
@@ -598,28 +598,28 @@
   </entry>
   
   <entry>
-    <title>Hexo在Github中搭建博客系统(1)Hexo安装</title>
+    <title>Hexo在GitHub中搭建博客系统(1)Hexo安装</title>
     <link href="http://chwshuang.github.io/2016/08/24/10001/"/>
     <id>http://chwshuang.github.io/2016/08/24/10001/</id>
     <published>2016-08-24T02:38:18.000Z</published>
-    <updated>2016-08-26T02:15:02.000Z</updated>
+    <updated>2016-08-30T02:19:27.000Z</updated>
     
     <content type="html"><![CDATA[<p>&#x4ECA;&#x5929;&#x901A;&#x8FC7;&#x5B89;&#x88C5;Hexo&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;,&#x642D;&#x5EFA;&#x4E86;&#x81EA;&#x5DF1;&#x7684;&#x4E00;&#x5957;&#x535A;&#x5BA2;<br>&#x73B0;&#x5728;&#x5206;&#x4EAB;&#x642D;&#x5EFA;&#x8FC7;&#x7A0B;,&#x611F;&#x8C22;hexo&#x56E2;&#x961F;&#x548C;maupassant&#x4E3B;&#x9898;&#x521B;&#x4F5C;&#x56E2;&#x961F;,&#x662F;&#x4F60;&#x4EEC;&#x8D4B;&#x4E88;&#x8FD9;&#x4E2A;&#x535A;&#x5BA2;&#x7684;&#x751F;&#x547D;!</p>
-<h1 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;"><a href="#&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;" class="headerlink" title="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; Hexo&#xFF1F;"></a>&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;Node.js&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x4E00;&#x5957;&#x535A;&#x5BA2;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;&#x5E76;&#x53EF;&#x76F4;&#x63A5;&#x5C06;&#x9759;&#x6001;&#x7F51;&#x9875;&#x4E00;&#x952E;&#x4E0A;&#x4F20;&#x5230;Github Pages,&#x751F;&#x6210;Github&#x4E3B;&#x9875;,&#x6253;&#x9020;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;!</p>
+<h1 id="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;"><a href="#&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F;-Hexo&#xFF1F;" class="headerlink" title="&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; Hexo&#xFF1F;"></a>&#x4E00;&#x3001;&#x4EC0;&#x4E48;&#x662F; <a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><p>Hexo &#x662F;&#x4E00;&#x4E2A;&#x57FA;&#x4E8E;Node.js&#x5FEB;&#x901F;&#x3001;&#x7B80;&#x6D01;&#x4E14;&#x9AD8;&#x6548;&#x7684;&#x4E00;&#x5957;&#x535A;&#x5BA2;&#x7BA1;&#x7406;&#x7CFB;&#x7EDF;&#x3002;Hexo &#x4F7F;&#x7528; Markdown&#xFF08;&#x6216;&#x5176;&#x4ED6;&#x6E32;&#x67D3;&#x5F15;&#x64CE;&#xFF09;&#x89E3;&#x6790;&#x6587;&#x7AE0;&#xFF0C;&#x5728;&#x51E0;&#x79D2;&#x5185;&#xFF0C;&#x5373;&#x53EF;&#x5229;&#x7528;&#x9753;&#x4E3D;&#x7684;&#x4E3B;&#x9898;&#x751F;&#x6210;&#x9759;&#x6001;&#x7F51;&#x9875;&#x3002;&#x5E76;&#x53EF;&#x76F4;&#x63A5;&#x5C06;&#x9759;&#x6001;&#x7F51;&#x9875;&#x4E00;&#x952E;&#x4E0A;&#x4F20;&#x5230;GitHub Pages,&#x751F;&#x6210;GitHub&#x4E3B;&#x9875;,&#x6253;&#x9020;&#x5C5E;&#x4E8E;&#x81EA;&#x5DF1;&#x7684;&#x4E2A;&#x4EBA;&#x535A;&#x5BA2;&#x7F51;&#x7AD9;!</p>
 <p>&#x4E3B;&#x8981;&#x6709;&#x56DB;&#x5927;&#x7279;&#x6027;:</p>
 <ul>
 <li>&#x5FEB;&#x901F;&#x81EA;&#x52A8;&#x751F;&#x6210;&#x5168;&#x7AD9;&#x9759;&#x6001;&#x9875;&#x9762;</li>
 <li>&#x652F;&#x6301;Markdown&#x8BED;&#x6CD5;</li>
-<li>&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;Github Pages,Heroku</li>
+<li>&#x4E00;&#x952E;&#x90E8;&#x7F72;&#x5230;GitHub Pages,Heroku</li>
 <li>&#x4E30;&#x5BCC;&#x7684;&#x63D2;&#x4EF6;,&#x652F;&#x6301;Jade&#x3001;CoffeeScript&#x8BED;&#x8A00;&#x521B;&#x5EFA;&#x6A21;&#x677F;</li>
 </ul>
 <h1 id="&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;"><a href="#&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;" class="headerlink" title="&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;Hexo&#xFF1F;"></a>&#x4E8C;&#x3001;&#x4E3A;&#x4EC0;&#x4E48;&#x8981;&#x7528;<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><ol>
-<li>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;,&#x914D;&#x5408;Github&#x6765;&#x5C55;&#x793A;&#x4F60;&#x7684;&#x4E2A;&#x4EBA;&#x9879;&#x76EE;&#x548C;&#x6280;&#x672F;&#x7ECF;&#x5386;!</li>
+<li>&#x5982;&#x679C;&#x4F60;&#x60F3;&#x8981;&#x4E00;&#x4E2A;&#x81EA;&#x5B9A;&#x4E49;&#x7684;&#x535A;&#x5BA2;&#x7CFB;&#x7EDF;,&#x914D;&#x5408;GitHub&#x6765;&#x5C55;&#x793A;&#x4F60;&#x7684;&#x4E2A;&#x4EBA;&#x9879;&#x76EE;&#x548C;&#x6280;&#x672F;&#x7ECF;&#x5386;!</li>
 <li>&#x5DF2;&#x7ECF;&#x538C;&#x5026;&#x4E86;&#x4F20;&#x7EDF;&#x535A;&#x5BA2;&#x7684;&#x5343;&#x7BC7;&#x4E00;&#x5F8B;,&#x51C6;&#x5907;&#x9AD8;&#x5927;&#x4E0A;&#x4E00;&#x628A;!</li>
 </ol>
 <h1 id="&#x4E09;&#x3001;&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;"><a href="#&#x4E09;&#x3001;&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;" class="headerlink" title="&#x4E09;&#x3001;&#x600E;&#x4E48;&#x7528;Hexo&#xFF1F;"></a>&#x4E09;&#x3001;&#x600E;&#x4E48;&#x7528;<a href="https://hexo.io/" target="_blank" rel="external">Hexo</a>&#xFF1F;</h1><h2 id="1-&#x524D;&#x63D0;&#x6761;&#x4EF6;"><a href="#1-&#x524D;&#x63D0;&#x6761;&#x4EF6;" class="headerlink" title="(1) &#x524D;&#x63D0;&#x6761;&#x4EF6;"></a>(1) &#x524D;&#x63D0;&#x6761;&#x4EF6;</h2><ol>
-<li>&#x62E5;&#x6709;&#x4E00;&#x4E2A;Github&#x8D26;&#x53F7; (<a href="https://github.com/" target="_blank" rel="external">&#x6CE8;&#x518C;</a>),&#x5E76;&#x4E14;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;github Pages&#x7684;&#x9879;&#x76EE;(<a href="https://pages.github.com/" target="_blank" rel="external">&#x4E0D;&#x4F1A;&#x70B9;&#x8FD9;&#x91CC;</a>)      </li>
-<li>&#x672C;&#x5730;&#x7535;&#x8111;&#x7684;&#x516C;&#x94A5;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x5230;Github&#x4E0A;&#x4E86;,&#x4E0D;&#x4F1A;&#x5F00;&#x8FD9;&#x91CC;<a href="http://blog.csdn.net/hustpzb/article/details/8230454" target="_blank" rel="external">&#x5982;&#x4F55;&#x751F;&#x6210;&#x672C;&#x673A;&#x516C;&#x94A5;</a>  </li>
+<li>&#x62E5;&#x6709;&#x4E00;&#x4E2A;GitHub&#x8D26;&#x53F7; (<a href="https://github.com/" target="_blank" rel="external">&#x6CE8;&#x518C;</a>),&#x5E76;&#x4E14;&#x5DF2;&#x7ECF;&#x521B;&#x5EFA;&#x81EA;&#x5DF1;&#x7684;github Pages&#x7684;&#x9879;&#x76EE;(<a href="https://pages.github.com/" target="_blank" rel="external">&#x4E0D;&#x4F1A;&#x70B9;&#x8FD9;&#x91CC;</a>)      </li>
+<li>&#x672C;&#x5730;&#x7535;&#x8111;&#x7684;&#x516C;&#x94A5;&#x5DF2;&#x7ECF;&#x52A0;&#x5165;&#x5230;GitHub&#x4E0A;&#x4E86;,&#x4E0D;&#x4F1A;&#x5F00;&#x8FD9;&#x91CC;<a href="http://blog.csdn.net/hustpzb/article/details/8230454" target="_blank" rel="external">&#x5982;&#x4F55;&#x751F;&#x6210;&#x672C;&#x673A;&#x516C;&#x94A5;</a>  </li>
 <li>&#x672C;&#x5730;&#x7535;&#x8111;&#x4E0A;&#x5DF2;&#x7ECF;<a href="http://blog.csdn.net/baihuaxiu123/article/details/51868142" target="_blank" rel="external">&#x5B89;&#x88C5;Node.js</a>,&#x5B89;&#x88C5;Git</li>
 <li>&#x672C;&#x5730;Git&#x7684;&#x90AE;&#x7BB1;&#x3001;&#x7528;&#x6237;&#x540D;&#x5DF2;&#x7ECF;&#x914D;&#x7F6E;&#x6210;&#x529F;</li>
 </ol>
@@ -644,16 +644,16 @@
 <p><img src="/2016/08/24/10001/img/homepage.jpg" alt="img"></p>
 <p>&#x5F53;&#x4F60;&#x770B;&#x5230;&#x8FD9;&#x4E2A;&#x56FE;&#x7247;&#x7684;&#x65F6;&#x5019;,&#x606D;&#x559C;&#x4F60;!&#x5927;&#x529F;&#x544A;&#x6210;!</p>
 <p>&#x7A81;&#x7136;&#x611F;&#x89C9;Level&#x63D0;&#x9AD8;&#x4E86;N&#x4E2A;&#x5C42;&#x6B21;,&#x9AD8;&#x5927;&#x4E0A;&#x4E86;&#x4E0D;&#x5C11;,&#x770B;&#x6765;&#x5F53;&#x4E0A;&#x603B;&#x7ECF;&#x7406;,&#x51FA;&#x4EFB;CEO,&#x8FCE;&#x5A36;&#x767D;&#x5BCC;&#x7F8E;,&#x4ECE;&#x6B64;&#x8D70;&#x5411;&#x4EBA;&#x751F;&#x5DC5;&#x5CF0;!&#x6307;&#x65E5;&#x53EF;&#x5F85;&#x554A;!<br>&#x60F3;&#x60F3;&#x662F;&#x4E0D;&#x662F;&#x8FD8;&#x6709;&#x70B9;&#x5C0F;&#x6FC0;&#x52A8;&#x5462;?  </p>
-<p><a href="../10002">&#x4E0B;&#x4E00;&#x8282;:Hexo&#x4E00;&#x952E;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x5230;Github</a></p>
+<p><a href="../10002">&#x4E0B;&#x4E00;&#x8282;:Hexo&#x4E00;&#x952E;&#x53D1;&#x5E03;&#x6587;&#x7AE0;&#x5230;GitHub</a></p>
 ]]></content>
     
     <summary type="html">
     
-      Hexo安装&lt;br&gt;快速自动生成全站静态页面 &lt;br&gt;支持Markdown语法 &lt;br&gt;一键部署到Github Pages,Heroku&lt;br&gt;丰富的插件,支持Jade、CoffeeScript语言创建模板
+      Hexo安装&lt;br&gt;快速自动生成全站静态页面 &lt;br&gt;支持Markdown语法 &lt;br&gt;一键部署到GitHub Pages,Heroku&lt;br&gt;丰富的插件,支持Jade、CoffeeScript语言创建模板
     
     </summary>
     
-      <category term="Github" scheme="http://chwshuang.github.io/categories/Github/"/>
+      <category term="GitHub" scheme="http://chwshuang.github.io/categories/GitHub/"/>
     
     
       <category term="Hexo" scheme="http://chwshuang.github.io/tags/Hexo/"/>

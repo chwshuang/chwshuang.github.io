@@ -34,29 +34,66 @@
 <figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ hexo deploy</div></pre></td></tr></table></figure>
 <h2 id="4-&#x67E5;&#x770B;&#x7ED3;&#x679C;"><a href="#4-&#x67E5;&#x770B;&#x7ED3;&#x679C;" class="headerlink" title="(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;"></a>(4) &#x67E5;&#x770B;&#x7ED3;&#x679C;</h2><p>&#x7136;&#x540E;&#x5230;&#x4F60;&#x7684;GitHub&#x4E0A;&#x9879;&#x76EE;&#x7684;&#x4E3B;&#x9875;,&#x770B;&#x770B;master&#x5206;&#x652F;&#x4E0A;&#x7684;&#x4EE3;&#x7801;&#x66F4;&#x65B0;&#x65F6;&#x95F4;</p>
 <p><img src="/2016/08/24/10002/img/branch.jpg" alt="&#x4EE3;&#x7801;&#x66F4;&#x65B0;&#x65F6;&#x95F4;&#x53D8;&#x6210;&#x521A;&#x521A;&#x63D0;&#x4EA4;&#x7684;&#x4E86;"></p>
-<h1 id="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"><a href="#&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;" class="headerlink" title="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"></a>&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h1><h2 id="1-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#1-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(1) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(1) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="external">hexo-deployer-heroku</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-heroku --save</div></pre></td></tr></table></figure></p>
+<h1 id="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"><a href="#&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;" class="headerlink" title="&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;"></a>&#x4E8C;&#x3001;&#x66F4;&#x591A;&#x90E8;&#x7F72;&#x8BE6;&#x7EC6;&#x8BF4;&#x660E;</h1><h2 id="1-FTPSync-FTP&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#1-FTPSync-FTP&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(1) FTPSync FTP&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(1) FTPSync FTP&#x65B9;&#x5F0F;&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="external">hexo-deployer-ftpsync</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-ftpsync --save</div></pre></td></tr></table></figure></p>
 <p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: heroku</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  message: [message]</div></pre></td></tr></table></figure>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: ftpsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  pass: &lt;password&gt;</div><div class="line">  remote: [remote]</div><div class="line">  port: [port]</div><div class="line">  ignore: [ignore]</div><div class="line">  connections: [connections]</div><div class="line">  verbose: [true&amp;|false]</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
 <th>&#x53C2;&#x6570;</th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
+<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>repo</td>
-<td style="text-align:center">Heroku &#x5E93;(Repository)&#x5730;&#x5740;</td>
+<td>host</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;</td>
+<td style="text-align:center"></td>
 </tr>
 <tr>
-<td>message</td>
-<td style="text-align:center">&#x81EA;&#x5B9A;&#x63D0;&#x4EA4;&#x4FE1;&#x606F; (&#x9ED8;&#x8BA4;&#x4E3A; Site updated: { { now(&#x2019;YYYY-MM-DD HH:mm:ss&#x2019;) } })</td>
+<td>user</td>
+<td style="text-align:center">&#x4F7F;&#x7528;&#x8005;&#x540D;&#x79F0;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>pass</td>
+<td style="text-align:center">&#x5BC6;&#x7801;</td>
+<td style="text-align:center"></td>
+</tr>
+<tr>
+<td>remote</td>
+<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x6839;&#x76EE;&#x5F55;</td>
+<td style="text-align:center">/</td>
+</tr>
+<tr>
+<td>port</td>
+<td style="text-align:center">&#x7AEF;&#x53E3;</td>
+<td style="text-align:center">21</td>
+</tr>
+<tr>
+<td>ignore</td>
+<td style="text-align:center">&#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</td>
+<td style="text-align:center">&#x65E0;&#x9ED8;&#x8BA4;&#x503C;,&#x793A;&#x4F8B;  [&#x2018;/git&#x2019;, &#x2018;/.svn&#x2019;]</td>
+</tr>
+<tr>
+<td>connections</td>
+<td style="text-align:center">&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x6570;</td>
+<td style="text-align:center">1</td>
+</tr>
+<tr>
+<td>verbose</td>
+<td style="text-align:center">&#x663E;&#x793A;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;</td>
+<td style="text-align:center">false</td>
 </tr>
 </tbody>
 </table>
-<h2 id="2-Rsync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#2-Rsync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(2) Rsync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(2) Rsync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-rsync" target="_blank" rel="external">hexo-deployer-rsync</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-rsync --save</div></pre></td></tr></table></figure></p>
-<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: rsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  root: &lt;root&gt;</div><div class="line">  port: [port]</div><div class="line">  delete: [true|false]</div><div class="line">  verbose: [true|false]</div><div class="line">  ignore_errors: [true|false]</div></pre></td></tr></table></figure></p>
+<p>&#x4E0D;&#x8981;&#x914D;&#x9519;&#x4E86;ignore, &#x8FD9;&#x91CC;&#x6709;&#x5751;</p>
+<p>&#x8FD9;&#x91CC;&#x6211;&#x7ED9;&#x51FA;&#x6211;&#x914D;&#x7F6E;GitHub&#x548C;&#x963F;&#x91CC;&#x4E91;&#x865A;&#x62DF;&#x670D;&#x52A1;&#x5668;&#x7684;&#x793A;&#x4F8B;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div></pre></td><td class="code"><pre><div class="line"> # Deployment</div><div class="line"> ## Docs: https://hexo.io/docs/deployment.html</div><div class="line">deploy:</div><div class="line">  - type: ftpsync</div><div class="line">    host: aliyun.my3w.com</div><div class="line">    user: username</div><div class="line">    pass: password</div><div class="line">    remote: /htdocs</div><div class="line">    port: 21</div><div class="line">    ignore: [&apos;/log&apos;, &apos;/.git&apos;]</div><div class="line">    connections: 1</div><div class="line">    verbose: true</div><div class="line">  - type: git</div><div class="line">    repo: https://github.com/username/username.github.com.git</div><div class="line">    branch: master</div><div class="line">  - type: git</div><div class="line">    repo: https://git.oschina.net/username/username.me.git</div></pre></td></tr></table></figure>
+<p>&#x6211;&#x8FD9;&#x91CC;&#x6211;&#x914D;&#x7F6E;&#x4E86;&#x4E09;&#x4E2A;&#x5730;&#x5740;:<br>&#x7B2C;&#x4E00;&#x4E2A;<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">&#x7B2C;&#x4E8C;&#x4E2A;```git```&#x662F;GitHub&#x7684;&#x5730;&#x5740;  </div><div class="line">&#x7B2C;&#x4E09;&#x4E2A;```git```&#x662F;&#x7801;&#x4E91;&#x7684;&#x5730;&#x5740;&#x3002;  </div><div class="line">&#x7F51;&#x7AD9;&#x5199;&#x597D;&#x4E4B;&#x540E;&#x5C31;&#x8981;&#x540C;&#x6B65;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x670D;&#x52A1;&#x5668;,&#x56E0;&#x4E3A;&#x7F51;&#x7AD9;&#x5199;&#x597D;&#x5C31;&#x90E8;&#x7F72;&#x5230;&#x963F;&#x91CC;&#x4E91;&#x7684;&#x514D;&#x8D39;&#x865A;&#x62DF;&#x673A;,&#x5B9E;&#x65F6;&#x5C31;&#x80FD;&#x67E5;&#x770B;,GitHub&#x662F;&#x76EE;&#x524D;&#x5168;&#x7403;&#x6700;&#x5927;&#x7684;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x5E73;&#x53F0;,&#x7801;&#x4E91;&#x662F;&#x76EE;&#x524D;&#x56FD;&#x5185;&#x6700;&#x597D;&#x7684;&#x4EE3;&#x7801;&#x6258;&#x7BA1;&#x5E73;&#x53F0;&#x3002;&#x5404;&#x53F8;&#x5176;&#x804C;,&#x5404;&#x6709;&#x6240;&#x957F;!</div><div class="line"></div><div class="line">## (2) Rsync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</div><div class="line">&#x5B89;&#x88C5; [hexo-deployer-rsync](https://github.com/hexojs/hexo-deployer-rsync)&#x3002;</div><div class="line"></div><div class="line">``` bash</div><div class="line">$ npm install hexo-deployer-rsync --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: rsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  root: &lt;root&gt;</div><div class="line">  port: [port]</div><div class="line">  delete: [true|false]</div><div class="line">  verbose: [true|false]</div><div class="line">  ignore_errors: [true|false]</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
@@ -122,61 +159,28 @@
 </tr>
 </tbody>
 </table>
-<h2 id="4-FTPSync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#4-FTPSync-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(4) FTPSync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(4) FTPSync &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-ftpsync" target="_blank" rel="external">hexo-deployer-ftpsync</a>&#x3002;<br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-ftpsync --save</div></pre></td></tr></table></figure></p>
-<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: ftpsync</div><div class="line">  host: &lt;host&gt;</div><div class="line">  user: &lt;user&gt;</div><div class="line">  pass: &lt;password&gt;</div><div class="line">  remote: [remote]</div><div class="line">  port: [port]</div><div class="line">  ignore: [ignore]</div><div class="line">  connections: [connections]</div><div class="line">  verbose: [true&amp;|false]</div></pre></td></tr></table></figure></p>
+<h2 id="4-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"><a href="#4-Heroku-&#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;" class="headerlink" title="(4) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;"></a>(4) Heroku &#x90E8;&#x7F72;&#x63D2;&#x4EF6;&#x53CA;&#x8BF4;&#x660E;</h2><p>&#x5B89;&#x88C5; <a href="https://github.com/hexojs/hexo-deployer-heroku" target="_blank" rel="external">hexo-deployer-heroku</a><br><figure class="highlight bash"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">$ npm install hexo-deployer-heroku --save</div></pre></td></tr></table></figure></p>
+<p>&#x4FEE;&#x6539;&#x914D;&#x7F6E;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">  type: heroku</div><div class="line">  repo: &lt;repository url&gt;</div><div class="line">  message: [message]</div></pre></td></tr></table></figure>
 <table>
 <thead>
 <tr>
 <th>&#x53C2;&#x6570;</th>
 <th style="text-align:center">&#x8BF4;&#x660E;</th>
-<th style="text-align:center">&#x9ED8;&#x8BA4;&#x503C;</th>
 </tr>
 </thead>
 <tbody>
 <tr>
-<td>host</td>
-<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x5730;&#x5740;</td>
-<td style="text-align:center"></td>
+<td>repo</td>
+<td style="text-align:center">Heroku &#x5E93;(Repository)&#x5730;&#x5740;</td>
 </tr>
 <tr>
-<td>user</td>
-<td style="text-align:center">&#x4F7F;&#x7528;&#x8005;&#x540D;&#x79F0;</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>pass</td>
-<td style="text-align:center">&#x5BC6;&#x7801;</td>
-<td style="text-align:center"></td>
-</tr>
-<tr>
-<td>remote</td>
-<td style="text-align:center">&#x8FDC;&#x7A0B;&#x4E3B;&#x673A;&#x7684;&#x6839;&#x76EE;&#x5F55;</td>
-<td style="text-align:center">/</td>
-</tr>
-<tr>
-<td>port</td>
-<td style="text-align:center">&#x7AEF;&#x53E3;</td>
-<td style="text-align:center">21</td>
-</tr>
-<tr>
-<td>ignore</td>
-<td style="text-align:center">&#x5FFD;&#x7565;&#x7684;&#x6587;&#x4EF6;&#x6216;&#x76EE;&#x5F55;</td>
-<td style="text-align:center">&#x65E0;&#x9ED8;&#x8BA4;&#x503C;,&#x793A;&#x4F8B;  [&#x2018;/git&#x2019;, &#x2018;/.svn&#x2019;]</td>
-</tr>
-<tr>
-<td>connections</td>
-<td style="text-align:center">&#x4F7F;&#x7528;&#x7684;&#x8FDE;&#x63A5;&#x6570;</td>
-<td style="text-align:center">1</td>
-</tr>
-<tr>
-<td>verbose</td>
-<td style="text-align:center">&#x663E;&#x793A;&#x8C03;&#x8BD5;&#x4FE1;&#x606F;</td>
-<td style="text-align:center">false</td>
+<td>message</td>
+<td style="text-align:center">&#x81EA;&#x5B9A;&#x63D0;&#x4EA4;&#x4FE1;&#x606F; (&#x9ED8;&#x8BA4;&#x4E3A; Site updated: { { now(&#x2019;YYYY-MM-DD HH:mm:ss&#x2019;) } })</td>
 </tr>
 </tbody>
 </table>
-<pre><code>&#x4E0D;&#x8981;&#x914D;&#x9519;&#x4E86;ignore, &#x8FD9;&#x91CC;&#x6709;&#x5751;
-</code></pre><h2 id="5-&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"><a href="#5-&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;" class="headerlink" title="(5) &#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"></a>(5) &#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;</h2><p>Hexo&#x652F;&#x6301;&#x540C;&#x65F6;&#x90E8;&#x7F72;git&#x548C;heroku&#x7B49;&#x591A;&#x4E2A;&#x4ED3;&#x5E93;,&#x53EA;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">- type: git</div><div class="line">  repo:</div><div class="line">- type: heroku</div><div class="line">  repo:</div></pre></td></tr></table></figure></p>
+<h2 id="5-&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"><a href="#5-&#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;" class="headerlink" title="(5) &#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;"></a>(5) &#x591A;&#x4ED3;&#x5E93;&#x90E8;&#x7F72;</h2><p>Hexo&#x652F;&#x6301;&#x540C;&#x65F6;&#x90E8;&#x7F72;git&#x548C;heroku&#x7B49;&#x591A;&#x4E2A;&#x4ED3;&#x5E93;,&#x53EA;&#x9700;&#x8981;&#x8FD9;&#x6837;&#x5199;:<br><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">deploy:</div><div class="line">- type: git</div><div class="line">  repo:</div><div class="line">- type: heroku</div><div class="line">  repo:</div></pre></td></tr></table></figure></p>
 <h2 id="6-&#x5176;&#x4ED6;&#x65B9;&#x6CD5;"><a href="#6-&#x5176;&#x4ED6;&#x65B9;&#x6CD5;" class="headerlink" title="(6) &#x5176;&#x4ED6;&#x65B9;&#x6CD5;"></a>(6) &#x5176;&#x4ED6;&#x65B9;&#x6CD5;</h2><p>Hexo &#x751F;&#x6210;&#x7684;&#x6240;&#x6709;&#x6587;&#x4EF6;&#x90FD;&#x653E;&#x5728; public &#x6587;&#x4EF6;&#x5939;&#x4E2D;&#xFF0C;&#x60A8;&#x53EF;&#x4EE5;&#x5C06;&#x5B83;&#x4EEC;&#x590D;&#x5236;&#x5230;&#x60A8;&#x9700;&#x8981;&#x7684;&#x5730;&#x65B9;&#x3002;</p>
 <p><a href="../10003">&#x4E0B;&#x4E00;&#x8282;:Hexo&#x5B89;&#x88C5;&#x4E3B;&#x9898;</a></p>
-</div><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a data-url="http://chwshuang.github.io/2016/08/24/10002/" data-id="cisiwxbzd0001lh3ijjvq6kwu" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Hexo/">Hexo</a></div><div class="post-nav"><a href="/2016/08/24/10003/" class="pre">Hexo在GitHub中搭建博客系统(3)Hexo安装主题</a><a href="/2016/08/24/10001/" class="next">Hexo在GitHub中搭建博客系统(1)Hexo安装</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="http://chwshuang.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dubbo/">Dubbo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Dubbo/" style="font-size: 15px;">Dubbo</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/10020/">Linux下Tomcat安装优化自启动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/10010/">Dubbo服务主机注册时出现主机上没有的IP的解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10007/">Hexo在GitHub中搭建博客系统(7)万网域名解析到GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10006/">Hexo在GitHub中搭建博客系统(6)异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10005/">Hexo在GitHub中搭建博客系统(5)Markdown语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10004/">Hexo在GitHub中搭建博客系统(4)建菜单写文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10003/">Hexo在GitHub中搭建博客系统(3)Hexo安装主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10002/">Hexo在GitHub中搭建博客系统(2)Hexo一键发布文章到GitHub</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10001/">Hexo在GitHub中搭建博客系统(1)Hexo安装</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.guojinyun.com/" title="Jinyun 's Blog" target="_blank">Jinyun 's Blog</a><ul></ul><a href="http://liubaing.com/" title="六八ing" target="_blank">六八ing</a><ul></ul><a href="https://github.com/zhouhailong" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">hushuang.me.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>
+</div><script type="text/javascript" src="/js/share.js?v=1.0.0" async></script><a data-url="http://chwshuang.github.io/2016/08/24/10002/" data-id="cisq0rlna0005m83ix07j503t" class="article-share-link">分享到</a><div class="tags"><a href="/tags/Hexo/">Hexo</a></div><div class="post-nav"><a href="/2016/08/24/10003/" class="pre">Hexo在GitHub中搭建博客系统(3)Hexo安装主题</a><a href="/2016/08/24/10001/" class="next">Hexo在GitHub中搭建博客系统(1)Hexo安装</a></div></div></div></div><div class="pure-u-1-4 hidden_mid_and_down"><div id="sidebar"><div class="widget"><form action="//www.baidu.com/baidu" method="get" accept-charset="utf-8" target="_blank" class="search-form"><input type="search" name="word" maxlength="20" placeholder="Search"/><input type="hidden" name="si" value="http://chwshuang.github.io"/><input name="tn" type="hidden" value="bds"/><input name="cl" type="hidden" value="3"/><input name="ct" type="hidden" value="2097152"/><input name="s" type="hidden" value="on"/></form></div><div class="widget"><div class="widget-title"><i class="fa fa-folder-o"> 分类</i></div><ul class="category-list"><li class="category-list-item"><a class="category-list-link" href="/categories/Dubbo/">Dubbo</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/GitHub/">GitHub</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/Tomcat/">Tomcat</a></li><li class="category-list-item"><a class="category-list-link" href="/categories/安全/">安全</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-star-o"> 标签</i></div><div class="tagcloud"><a href="/tags/Hexo/" style="font-size: 15px;">Hexo</a> <a href="/tags/Dubbo/" style="font-size: 15px;">Dubbo</a> <a href="/tags/Https/" style="font-size: 15px;">Https</a> <a href="/tags/Tomcat/" style="font-size: 15px;">Tomcat</a></div></div><div class="widget"><div class="widget-title"><i class="fa fa-file-o"> 最新文章</i></div><ul class="post-list"><li class="post-list-item"><a class="post-list-link" href="/2016/09/05/10008/">阿里云云虚拟主机上个人网站的Https访问配置</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/10020/">Linux下Tomcat安装优化自启动</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/26/10010/">Dubbo服务主机注册时出现主机上没有的IP的解决方案</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10007/">Hexo在GitHub中搭建博客系统(7)万网域名解析到GitHub Pages</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10006/">Hexo在GitHub中搭建博客系统(6)异常处理</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10005/">Hexo在GitHub中搭建博客系统(5)Markdown语法</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10004/">Hexo在GitHub中搭建博客系统(4)建菜单写文章</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10003/">Hexo在GitHub中搭建博客系统(3)Hexo安装主题</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10002/">Hexo在GitHub中搭建博客系统(2)Hexo一键发布文章到GitHub</a></li><li class="post-list-item"><a class="post-list-link" href="/2016/08/24/10001/">Hexo在GitHub中搭建博客系统(1)Hexo安装</a></li></ul></div><div class="widget"><div class="widget-title"><i class="fa fa-external-link"> 友情链接</i></div><ul></ul><a href="http://www.guojinyun.com/" title="Jinyun 's Blog" target="_blank">Jinyun 's Blog</a><ul></ul><a href="http://liubaing.com/" title="六八ing" target="_blank">六八ing</a><ul></ul><a href="https://github.com/zhouhailong" title="site-name3" target="_blank">site-name3</a></div></div></div><div class="pure-u-1 pure-u-md-3-4"><div id="footer">© <a href="/." rel="nofollow">hushuang.me.</a> Powered by<a rel="nofollow" target="_blank" href="https://hexo.io"> Hexo.</a><a rel="nofollow" target="_blank" href="https://github.com/tufu9441/maupassant-hexo"> Theme</a> by<a rel="nofollow" target="_blank" href="https://github.com/pagecho"> Cho.</a></div></div></div><a id="rocket" href="#top" class="show"></a><script type="text/javascript" src="/js/totop.js?v=1.0.0" async></script><script type="text/javascript" src="//cdn.bootcss.com/fancybox/2.1.5/jquery.fancybox.pack.js" async></script><script type="text/javascript" src="/js/fancybox.js?v=1.0.0" async></script><link rel="stylesheet" type="text/css" href="/css/jquery.fancybox.css?v=1.0.0"><script type="text/javascript" src="/js/codeblock-resizer.js?v=1.0.0"></script><script type="text/javascript" src="/js/smartresize.js?v=1.0.0"></script></div></body></html>

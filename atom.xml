@@ -220,117 +220,6 @@
   </entry>
   
   <entry>
-    <title>Redis有序集合命令ZREVRANGEBYLEX详解与应用</title>
-    <link href="http://www.hushuang.me/2016/10/25/10042/"/>
-    <id>http://www.hushuang.me/2016/10/25/10042/</id>
-    <published>2016-10-25T01:50:04.000Z</published>
-    <updated>2016-10-25T03:29:01.000Z</updated>
-    
-    <content type="html"><![CDATA[<h2 id="1-&#x7B80;&#x4ECB;"><a href="#1-&#x7B80;&#x4ECB;" class="headerlink" title="1 &#x7B80;&#x4ECB;"></a><strong>1 &#x7B80;&#x4ECB;</strong></h2><p>ZREVRANGEBYLEX &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x6309;&#x6210;&#x5458;&#x5B57;&#x5178;&#x5012;&#x5E8F;&#x6392;&#x5E8F;, &#x5206;&#x6570;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#x3002;<br>&#x5728;&#x67D0;&#x4E9B;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x4E2D;,&#x9700;&#x8981;&#x5BF9;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x6309;&#x540D;&#x79F0;&#x7684;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x5012;&#x5E8F;&#x6392;&#x5217;&#x65F6;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Redis&#x4E2D;SortSet&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x5904;&#x7406;&#x3002;</p>
-<h2 id="2-&#x8BED;&#x6CD5;"><a href="#2-&#x8BED;&#x6CD5;" class="headerlink" title="2 &#x8BED;&#x6CD5;"></a><strong>2 &#x8BED;&#x6CD5;</strong></h2><h3 id="2-1-&#x5B8C;&#x6574;&#x793A;&#x4F8B;"><a href="#2-1-&#x5B8C;&#x6574;&#x793A;&#x4F8B;" class="headerlink" title="2.1 &#x5B8C;&#x6574;&#x793A;&#x4F8B;"></a><strong>2.1 &#x5B8C;&#x6574;&#x793A;&#x4F8B;</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ZREVRANGEBYLEX key max min [LIMIT offset count]</div></pre></td></tr></table></figure>
-<h3 id="2-2-&#x8BF4;&#x660E;"><a href="#2-2-&#x8BF4;&#x660E;" class="headerlink" title="2.2 &#x8BF4;&#x660E;"></a><strong>2.2 &#x8BF4;&#x660E;</strong></h3><table>
-<thead>
-<tr>
-<th>&#x6307;&#x4EE4;</th>
-<th style="text-align:center">&#x5FC5;&#x987B;</th>
-<th style="text-align:center">&#x8BF4;&#x660E;</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>ZREVRANGEBYLEX</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x6307;&#x4EE4;</td>
-</tr>
-<tr>
-<td>key</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x952E;&#x540D;&#x79F0;</td>
-</tr>
-<tr>
-<td>max</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x5B57;&#x5178;&#x4E2D;&#x6392;&#x5E8F;&#x4F4D;&#x7F6E;&#x8F83;&#x5927;&#x7684;&#x6210;&#x5458;,&#x5FC5;&#x987B;&#x4EE5;&#x201D;[&#x201C;&#x5F00;&#x5934;,&#x6216;&#x8005;&#x4EE5;&#x201D;(&#x201C;&#x5F00;&#x5934;,&#x53EF;&#x4F7F;&#x7528;&#x201D;+&#x201D;&#x4EE3;&#x66FF;</td>
-</tr>
-<tr>
-<td>min</td>
-<td style="text-align:center">&#x662F;</td>
-<td style="text-align:center">&#x5B57;&#x5178;&#x4E2D;&#x6392;&#x5E8F;&#x4F4D;&#x7F6E;&#x8F83;&#x5C0F;&#x7684;&#x6210;&#x5458;,&#x5FC5;&#x987B;&#x4EE5;&#x201D;[&#x201C;&#x5F00;&#x5934;,&#x6216;&#x8005;&#x4EE5;&#x201D;(&#x201C;&#x5F00;&#x5934;,&#x53EF;&#x4F7F;&#x7528;&#x201D;-&#x201C;&#x4EE3;&#x66FF;</td>
-</tr>
-<tr>
-<td>LIMIT</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x5206;&#x9875;,&#x6307;&#x4EE4;&#x4E2D;&#x5305;&#x542B;LIMIT&#x540E;offset&#x3001;count&#x5FC5;&#x987B;&#x8F93;&#x5165;</td>
-</tr>
-<tr>
-<td>offset</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</td>
-</tr>
-<tr>
-<td>count</td>
-<td style="text-align:center">&#x5426;</td>
-<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x6570;&#x91CF;</td>
-</tr>
-</tbody>
-</table>
-<p><strong>&#x63D0;&#x793A;:</strong></p>
-<ul>
-<li>&#x5206;&#x6570;&#x5FC5;&#x987B;&#x76F8;&#x540C;! &#x5982;&#x679C;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6210;&#x5458;&#x5206;&#x6570;&#x6709;&#x4E0D;&#x4E00;&#x81F4;&#x7684;,&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x4E0D;&#x51C6;&#x3002;</li>
-<li>&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x5B57;&#x8282;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;</li>
-<li>&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;ASCII&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x3002;&#x5982;&#x679C;&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;utf-8&#x8FD9;&#x7C7B;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5185;&#x5BB9;,&#x5C31;&#x4F1A;&#x5F71;&#x54CD;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;,&#x6240;&#x4EE5;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x3002;</li>
-<li>&#x6E90;&#x7801;&#x4E2D;&#x91C7;&#x7528;C&#x8BED;&#x8A00;&#x4E2D;<code>memcmp()</code> &#x51FD;&#x6570;, &#x4ECE;&#x5B57;&#x7B26;&#x7684;&#x7B2C;0&#x4F4D;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;,&#x5982;&#x679C;&#x524D;&#x9762;&#x90E8;&#x5206;&#x76F8;&#x540C;,&#x90A3;&#x4E48;&#x8F83;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x77ED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6392;&#x5E8F;&#x9760;&#x524D;&#x3002;</li>
-<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x5FC5;&#x987B;&#x52A0; &#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x3002;&#x201D;[&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;, &#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4F1A;&#x5305;&#x542B;&#x53C2;&#x6570;  &#x201C;max&#x201D;&#x548C; &#x201C;min&#x201D;</li>
-<li>&#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x53EF;&#x4EE5;&#x52A0; &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x8868;&#x793A;&#x5C0F;&#x4E8E;, &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4E0D;&#x4F1A;&#x5305;&#x542B; &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x6210;&#x5458;&#x3002;</li>
-<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x201C;-&#x201C; &#x548C; &#x201C;+&#x201D; &#x8868;&#x793A;&#x5F97;&#x5206;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;</li>
-<li>&#x201C;max&#x201D;&#x548C; &#x201C;min&#x201D;  &#x4E0D;&#x80FD;&#x53CD;,  &#x201C;max&#x201D;  &#x653E;&#x540E;&#x9762; &#x201C;min&#x201D;&#x653E;&#x524D;&#x9762;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</li>
-<li>&#x4E0E;ZREVRANGEBYLEX&#x83B7;&#x53D6;&#x987A;&#x5E8F;&#x76F8;&#x53CD;&#x7684;&#x6307;&#x4EE4;&#x662F;<a href="../10044">ZRANGEBYLEX</a>&#x3002;</li>
-</ul>
-<h2 id="3-&#x8FD4;&#x56DE;&#x503C;"><a href="#3-&#x8FD4;&#x56DE;&#x503C;" class="headerlink" title="3 &#x8FD4;&#x56DE;&#x503C;"></a><strong>3 &#x8FD4;&#x56DE;&#x503C;</strong></h2><p>&#x6307;&#x5B9A;&#x6210;&#x5458;&#x8303;&#x56F4;&#x7684;&#x5143;&#x7D20;&#x5217;&#x8868;&#x3002;</p>
-<h2 id="4-&#x793A;&#x4F8B;"><a href="#4-&#x793A;&#x4F8B;" class="headerlink" title="4 &#x793A;&#x4F8B;"></a><strong>4 &#x793A;&#x4F8B;</strong></h2><p>&#x4E0D;&#x8981;&#x5728;&#x5206;&#x6570;&#x4E0D;&#x4E00;&#x81F4;&#x7684;SortSet&#x96C6;&#x5408;&#x4E2D;&#x53BB;&#x4F7F;&#x7528; ZREVRANGEBYLEX &#x6307;&#x4EE4;,&#x56E0;&#x4E3A;&#x83B7;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x51C6;&#x786E;&#x3002;</p>
-<h3 id="4-1-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;"><a href="#4-1-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;" class="headerlink" title="4.1 &#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;"></a><strong>4.1 &#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;</strong></h3><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x201C;-&#x201C; &#x548C; &#x201C;+&#x201D; &#x8868;&#x793A;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd zset 0 a 0 aa 0 abc 0 apple 0 b 0 c 0 d 0 d1 0 dd 0 dobble 0 z 0 z1</div><div class="line">(integer) 12</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + -</div><div class="line"> 1) &quot;z1&quot;</div><div class="line"> 2) &quot;z&quot;</div><div class="line"> 3) &quot;dobble&quot;</div><div class="line"> 4) &quot;dd&quot;</div><div class="line"> 5) &quot;d1&quot;</div><div class="line"> 6) &quot;d&quot;</div><div class="line"> 7) &quot;c&quot;</div><div class="line"> 8) &quot;b&quot;</div><div class="line"> 9) &quot;apple&quot;</div><div class="line">10) &quot;abc&quot;</div><div class="line">11) &quot;aa&quot;</div><div class="line">12) &quot;a&quot;</div></pre></td></tr></table></figure>
-<h3 id="4-2-&#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;"><a href="#4-2-&#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;" class="headerlink" title="4.2 &#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;"></a><strong>4.2 &#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset + - LIMIT 0 3</div><div class="line">1) &quot;z1&quot;</div><div class="line">2) &quot;z&quot;</div><div class="line">3) &quot;dobble&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - LIMIT 3 3</div><div class="line">1) &quot;dd&quot;</div><div class="line">2) &quot;d1&quot;</div><div class="line">3) &quot;d&quot;</div></pre></td></tr></table></figure>
-<h3 id="4-3-&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"><a href="#4-3-&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;" class="headerlink" title="4.3 &#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"></a><strong>4.3 &#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;</strong></h3><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x5FC5;&#x987B;&#x52A0; &#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x3002;<br>&#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;, &#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4F1A;&#x5305;&#x542B;&#x53C2;&#x6570; &#x201C;min&#x201D; &#x548C; &#x201C;max&#x201D; &#x3002;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset [c [aa</div><div class="line">1) &quot;c&quot;</div><div class="line">2) &quot;b&quot;</div><div class="line">3) &quot;apple&quot;</div><div class="line">4) &quot;abc&quot;</div><div class="line">5) &quot;aa&quot;</div></pre></td></tr></table></figure>
-<p>&#x201C;min&#x201D; &#x548C; &#x201C;max&#x201D;  &#x4E0D;&#x80FD;&#x53CD;,  &#x201C;min&#x201D; &#x653E;&#x524D;&#x9762; &#x201C;max&#x201D;&#x653E;&#x540E;&#x9762;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset [aa [c</div><div class="line">(empty list or set)</div></pre></td></tr></table></figure>
-<h3 id="4-4-&#x4F7F;&#x7528;-&#x201C;-&#x201C;-&#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"><a href="#4-4-&#x4F7F;&#x7528;-&#x201C;-&#x201C;-&#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;" class="headerlink" title="4.4 &#x4F7F;&#x7528; &#x201C;(&#x201C; &#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"></a><strong>4.4 &#x4F7F;&#x7528; &#x201C;(&#x201C; &#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;</strong></h3><p>&#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x53EF;&#x4EE5;&#x52A0; &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x8868;&#x793A;&#x5C0F;&#x4E8E;, &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;&#x3002;<br>&#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4E0D;&#x4F1A;&#x5305;&#x542B; &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x6210;&#x5458;&#x3002;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset (c [aa</div><div class="line">1) &quot;b&quot;</div><div class="line">2) &quot;apple&quot;</div><div class="line">3) &quot;abc&quot;</div><div class="line">4) &quot;aa&quot;</div></pre></td></tr></table></figure>
-<h3 id="4-5-ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;"><a href="#4-5-ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;" class="headerlink" title="4.5 ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;"></a><strong>4.5 ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;</strong></h3><p>&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x5B57;&#x8282;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;<br>&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;ASCII&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x3002;<br>&#x5982;&#x679C;&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;utf-8&#x8FD9;&#x7C7B;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5185;&#x5BB9;,&#x5C31;&#x4F1A;&#x5F71;&#x54CD;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;,&#x6240;&#x4EE5;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x3002;</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd zset 0 dB</div><div class="line">(integer) 1</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + -</div><div class="line"> 1) &quot;z1&quot;</div><div class="line"> 2) &quot;z&quot;</div><div class="line"> 3) &quot;dobble&quot;</div><div class="line"> 4) &quot;dd&quot;</div><div class="line"> 5) &quot;dB&quot;</div><div class="line"> 6) &quot;d1&quot;</div><div class="line"> 7) &quot;d&quot;</div><div class="line"> 8) &quot;c&quot;</div><div class="line"> 9) &quot;b&quot;</div><div class="line">10) &quot;apple&quot;</div><div class="line">11) &quot;abc&quot;</div><div class="line">12) &quot;aa&quot;</div><div class="line">13) &quot;a&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - limit 0 3</div><div class="line">1) &quot;z1&quot;</div><div class="line">2) &quot;z&quot;</div><div class="line">3) &quot;dobble&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - limit 3 3</div><div class="line">1) &quot;dd&quot;</div><div class="line">2) &quot;dB&quot;</div><div class="line">3) &quot;d1&quot;</div></pre></td></tr></table></figure>
-<h2 id="5-&#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;"><a href="#5-&#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;" class="headerlink" title="5 &#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;"></a>5 &#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;</h2><h3 id="5-1-&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;"><a href="#5-1-&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;" class="headerlink" title="5.1 &#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;"></a><strong>5.1 &#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;</strong></h3><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x5B58;&#x50A8;&#x5230;SortSet&#x4E2D;,&#x7136;&#x540E;&#x6839;&#x636E;&#x9700;&#x8981;&#x6765;&#x83B7;&#x53D6;&#x53F7;&#x6BB5;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd phone 0 13100111100 0 13110114300 0 13132110901 </div><div class="line">(integer) 3</div><div class="line">redis&gt; zadd phone 0 13200111100 0 13210414300 0 13252110901 </div><div class="line">(integer) 3</div><div class="line">redis&gt; zadd phone 0 13300111100 0 13310414300 0 13352110901 </div><div class="line">(integer) 3</div></pre></td></tr></table></figure>
-<p>&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x53F7;&#x7801;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone + -</div><div class="line">1) &quot;13352110901&quot;</div><div class="line">2) &quot;13310414300&quot;</div><div class="line">3) &quot;13300111100&quot;</div><div class="line">4) &quot;13252110901&quot;</div><div class="line">5) &quot;13210414300&quot;</div><div class="line">6) &quot;13200111100&quot;</div><div class="line">7) &quot;13132110901&quot;</div><div class="line">8) &quot;13110114300&quot;</div><div class="line">9) &quot;13100111100&quot;</div></pre></td></tr></table></figure>
-<p>&#x83B7;&#x53D6;132&#x53F7;&#x6BB5;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone (133 [132</div><div class="line">1) &quot;13252110901&quot;</div><div class="line">2) &quot;13210414300&quot;</div><div class="line">3) &quot;13200111100&quot;</div></pre></td></tr></table></figure>
-<p>&#x83B7;&#x53D6;132&#x3001;133&#x53F7;&#x6BB5;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone (134 [132</div><div class="line">1) &quot;13352110901&quot;</div><div class="line">2) &quot;13310414300&quot;</div><div class="line">3) &quot;13300111100&quot;</div><div class="line">4) &quot;13252110901&quot;</div><div class="line">5) &quot;13210414300&quot;</div><div class="line">6) &quot;13200111100&quot;</div></pre></td></tr></table></figure>
-<h3 id="5-2-&#x59D3;&#x540D;&#x6392;&#x5E8F;"><a href="#5-2-&#x59D3;&#x540D;&#x6392;&#x5E8F;" class="headerlink" title="5.2 &#x59D3;&#x540D;&#x6392;&#x5E8F;"></a><strong>5.2 &#x59D3;&#x540D;&#x6392;&#x5E8F;</strong></h3><p>&#x5C06;&#x540D;&#x79F0;&#x5B58;&#x50A8;&#x5230;SortSet&#x4E2D;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd names 0 Toumas 0 Jake 0 Bluetuo 0 Gaodeng 0 Aimini 0 Aidehua </div><div class="line">(integer) 6</div></pre></td></tr></table></figure>
-<p>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#x5012;&#x5E8F;&#x6392;&#x5217;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names + -</div><div class="line">1) &quot;Toumas&quot;</div><div class="line">2) &quot;Jake&quot;</div><div class="line">3) &quot;Gaodeng&quot;</div><div class="line">4) &quot;Bluetuo&quot;</div><div class="line">5) &quot;Aimini&quot;</div><div class="line">6) &quot;Aidehua&quot;</div></pre></td></tr></table></figure>
-<p>&#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x5927;&#x5199;&#x5B57;&#x6BCD;A&#x5F00;&#x5934;&#x7684;&#x6240;&#x6709;&#x4EBA;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names (B [A</div><div class="line">1) &quot;Aimini&quot;</div><div class="line">2) &quot;Aidehua&quot;</div></pre></td></tr></table></figure>
-<p>&#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x5927;&#x5199;&#x5B57;&#x6BCD;C&#x5230;Z&#x7684;&#x6240;&#x6709;&#x4EBA;:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names [Z [C</div><div class="line">1) &quot;Toumas&quot;</div><div class="line">2) &quot;Jake&quot;</div><div class="line">3) &quot;Gaodeng&quot;</div></pre></td></tr></table></figure>
-]]></content>
-    
-    <summary type="html">
-    
-      Redis有序集合命令ZREVRANGEBYLEX详解与应用
-    
-    </summary>
-    
-      <category term="Redis" scheme="http://www.hushuang.me/categories/Redis/"/>
-    
-    
-      <category term="Redis" scheme="http://www.hushuang.me/tags/Redis/"/>
-    
-  </entry>
-  
-  <entry>
     <title>Redis有序集合命令ZRANGEBYLEX详解与应用</title>
     <link href="http://www.hushuang.me/2016/10/25/10044/"/>
     <id>http://www.hushuang.me/2016/10/25/10044/</id>
@@ -514,6 +403,117 @@
     <summary type="html">
     
       Redis有序集合命令ZREMRANGEBYLEX详解与应用
+    
+    </summary>
+    
+      <category term="Redis" scheme="http://www.hushuang.me/categories/Redis/"/>
+    
+    
+      <category term="Redis" scheme="http://www.hushuang.me/tags/Redis/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Redis有序集合命令ZREVRANGEBYLEX详解与应用</title>
+    <link href="http://www.hushuang.me/2016/10/25/10042/"/>
+    <id>http://www.hushuang.me/2016/10/25/10042/</id>
+    <published>2016-10-25T01:50:04.000Z</published>
+    <updated>2016-10-25T03:29:01.000Z</updated>
+    
+    <content type="html"><![CDATA[<h2 id="1-&#x7B80;&#x4ECB;"><a href="#1-&#x7B80;&#x4ECB;" class="headerlink" title="1 &#x7B80;&#x4ECB;"></a><strong>1 &#x7B80;&#x4ECB;</strong></h2><p>ZREVRANGEBYLEX &#x8FD4;&#x56DE;&#x6307;&#x5B9A;&#x6210;&#x5458;&#x533A;&#x95F4;&#x5185;&#x7684;&#x6210;&#x5458;&#xFF0C;&#x6309;&#x6210;&#x5458;&#x5B57;&#x5178;&#x5012;&#x5E8F;&#x6392;&#x5E8F;, &#x5206;&#x6570;&#x5FC5;&#x987B;&#x76F8;&#x540C;&#x3002;<br>&#x5728;&#x67D0;&#x4E9B;&#x4E1A;&#x52A1;&#x573A;&#x666F;&#x4E2D;,&#x9700;&#x8981;&#x5BF9;&#x4E00;&#x4E2A;&#x5B57;&#x7B26;&#x4E32;&#x6570;&#x7EC4;&#x6309;&#x540D;&#x79F0;&#x7684;&#x5B57;&#x5178;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x5012;&#x5E8F;&#x6392;&#x5217;&#x65F6;,&#x53EF;&#x4EE5;&#x4F7F;&#x7528;Redis&#x4E2D;SortSet&#x8FD9;&#x79CD;&#x6570;&#x636E;&#x7ED3;&#x6784;&#x6765;&#x5904;&#x7406;&#x3002;</p>
+<h2 id="2-&#x8BED;&#x6CD5;"><a href="#2-&#x8BED;&#x6CD5;" class="headerlink" title="2 &#x8BED;&#x6CD5;"></a><strong>2 &#x8BED;&#x6CD5;</strong></h2><h3 id="2-1-&#x5B8C;&#x6574;&#x793A;&#x4F8B;"><a href="#2-1-&#x5B8C;&#x6574;&#x793A;&#x4F8B;" class="headerlink" title="2.1 &#x5B8C;&#x6574;&#x793A;&#x4F8B;"></a><strong>2.1 &#x5B8C;&#x6574;&#x793A;&#x4F8B;</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div></pre></td><td class="code"><pre><div class="line">ZREVRANGEBYLEX key max min [LIMIT offset count]</div></pre></td></tr></table></figure>
+<h3 id="2-2-&#x8BF4;&#x660E;"><a href="#2-2-&#x8BF4;&#x660E;" class="headerlink" title="2.2 &#x8BF4;&#x660E;"></a><strong>2.2 &#x8BF4;&#x660E;</strong></h3><table>
+<thead>
+<tr>
+<th>&#x6307;&#x4EE4;</th>
+<th style="text-align:center">&#x5FC5;&#x987B;</th>
+<th style="text-align:center">&#x8BF4;&#x660E;</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>ZREVRANGEBYLEX</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">&#x6307;&#x4EE4;</td>
+</tr>
+<tr>
+<td>key</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x952E;&#x540D;&#x79F0;</td>
+</tr>
+<tr>
+<td>max</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">&#x5B57;&#x5178;&#x4E2D;&#x6392;&#x5E8F;&#x4F4D;&#x7F6E;&#x8F83;&#x5927;&#x7684;&#x6210;&#x5458;,&#x5FC5;&#x987B;&#x4EE5;&#x201D;[&#x201C;&#x5F00;&#x5934;,&#x6216;&#x8005;&#x4EE5;&#x201D;(&#x201C;&#x5F00;&#x5934;,&#x53EF;&#x4F7F;&#x7528;&#x201D;+&#x201D;&#x4EE3;&#x66FF;</td>
+</tr>
+<tr>
+<td>min</td>
+<td style="text-align:center">&#x662F;</td>
+<td style="text-align:center">&#x5B57;&#x5178;&#x4E2D;&#x6392;&#x5E8F;&#x4F4D;&#x7F6E;&#x8F83;&#x5C0F;&#x7684;&#x6210;&#x5458;,&#x5FC5;&#x987B;&#x4EE5;&#x201D;[&#x201C;&#x5F00;&#x5934;,&#x6216;&#x8005;&#x4EE5;&#x201D;(&#x201C;&#x5F00;&#x5934;,&#x53EF;&#x4F7F;&#x7528;&#x201D;-&#x201C;&#x4EE3;&#x66FF;</td>
+</tr>
+<tr>
+<td>LIMIT</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x662F;&#x5426;&#x5206;&#x9875;,&#x6307;&#x4EE4;&#x4E2D;&#x5305;&#x542B;LIMIT&#x540E;offset&#x3001;count&#x5FC5;&#x987B;&#x8F93;&#x5165;</td>
+</tr>
+<tr>
+<td>offset</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x8D77;&#x59CB;&#x4F4D;&#x7F6E;</td>
+</tr>
+<tr>
+<td>count</td>
+<td style="text-align:center">&#x5426;</td>
+<td style="text-align:center">&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x6570;&#x91CF;</td>
+</tr>
+</tbody>
+</table>
+<p><strong>&#x63D0;&#x793A;:</strong></p>
+<ul>
+<li>&#x5206;&#x6570;&#x5FC5;&#x987B;&#x76F8;&#x540C;! &#x5982;&#x679C;&#x6709;&#x5E8F;&#x96C6;&#x5408;&#x4E2D;&#x7684;&#x6210;&#x5458;&#x5206;&#x6570;&#x6709;&#x4E0D;&#x4E00;&#x81F4;&#x7684;,&#x8FD4;&#x56DE;&#x7684;&#x7ED3;&#x679C;&#x5C31;&#x4E0D;&#x51C6;&#x3002;</li>
+<li>&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x5B57;&#x8282;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;</li>
+<li>&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;ASCII&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x3002;&#x5982;&#x679C;&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;utf-8&#x8FD9;&#x7C7B;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5185;&#x5BB9;,&#x5C31;&#x4F1A;&#x5F71;&#x54CD;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;,&#x6240;&#x4EE5;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x3002;</li>
+<li>&#x6E90;&#x7801;&#x4E2D;&#x91C7;&#x7528;C&#x8BED;&#x8A00;&#x4E2D;<code>memcmp()</code> &#x51FD;&#x6570;, &#x4ECE;&#x5B57;&#x7B26;&#x7684;&#x7B2C;0&#x4F4D;&#x5230;&#x6700;&#x540E;&#x4E00;&#x4F4D;&#x8FDB;&#x884C;&#x6392;&#x5E8F;,&#x5982;&#x679C;&#x524D;&#x9762;&#x90E8;&#x5206;&#x76F8;&#x540C;,&#x90A3;&#x4E48;&#x8F83;&#x957F;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6BD4;&#x8F83;&#x77ED;&#x7684;&#x5B57;&#x7B26;&#x4E32;&#x6392;&#x5E8F;&#x9760;&#x524D;&#x3002;</li>
+<li>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x5FC5;&#x987B;&#x52A0; &#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x3002;&#x201D;[&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;, &#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4F1A;&#x5305;&#x542B;&#x53C2;&#x6570;  &#x201C;max&#x201D;&#x548C; &#x201C;min&#x201D;</li>
+<li>&#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x53EF;&#x4EE5;&#x52A0; &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x8868;&#x793A;&#x5C0F;&#x4E8E;, &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;&#x3002;&#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4E0D;&#x4F1A;&#x5305;&#x542B; &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x6210;&#x5458;&#x3002;</li>
+<li>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x201C;-&#x201C; &#x548C; &#x201C;+&#x201D; &#x8868;&#x793A;&#x5F97;&#x5206;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;</li>
+<li>&#x201C;max&#x201D;&#x548C; &#x201C;min&#x201D;  &#x4E0D;&#x80FD;&#x53CD;,  &#x201C;max&#x201D;  &#x653E;&#x540E;&#x9762; &#x201C;min&#x201D;&#x653E;&#x524D;&#x9762;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</li>
+<li>&#x4E0E;ZREVRANGEBYLEX&#x83B7;&#x53D6;&#x987A;&#x5E8F;&#x76F8;&#x53CD;&#x7684;&#x6307;&#x4EE4;&#x662F;<a href="../10044">ZRANGEBYLEX</a>&#x3002;</li>
+</ul>
+<h2 id="3-&#x8FD4;&#x56DE;&#x503C;"><a href="#3-&#x8FD4;&#x56DE;&#x503C;" class="headerlink" title="3 &#x8FD4;&#x56DE;&#x503C;"></a><strong>3 &#x8FD4;&#x56DE;&#x503C;</strong></h2><p>&#x6307;&#x5B9A;&#x6210;&#x5458;&#x8303;&#x56F4;&#x7684;&#x5143;&#x7D20;&#x5217;&#x8868;&#x3002;</p>
+<h2 id="4-&#x793A;&#x4F8B;"><a href="#4-&#x793A;&#x4F8B;" class="headerlink" title="4 &#x793A;&#x4F8B;"></a><strong>4 &#x793A;&#x4F8B;</strong></h2><p>&#x4E0D;&#x8981;&#x5728;&#x5206;&#x6570;&#x4E0D;&#x4E00;&#x81F4;&#x7684;SortSet&#x96C6;&#x5408;&#x4E2D;&#x53BB;&#x4F7F;&#x7528; ZREVRANGEBYLEX &#x6307;&#x4EE4;,&#x56E0;&#x4E3A;&#x83B7;&#x53D6;&#x7684;&#x7ED3;&#x679C;&#x5E76;&#x4E0D;&#x51C6;&#x786E;&#x3002;</p>
+<h3 id="4-1-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;"><a href="#4-1-&#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;" class="headerlink" title="4.1 &#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;"></a><strong>4.1 &#x83B7;&#x53D6;&#x6240;&#x6709;&#x503C;</strong></h3><p>&#x53EF;&#x4EE5;&#x4F7F;&#x7528; &#x201C;-&#x201C; &#x548C; &#x201C;+&#x201D; &#x8868;&#x793A;&#x6700;&#x5C0F;&#x503C;&#x548C;&#x6700;&#x5927;&#x503C;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd zset 0 a 0 aa 0 abc 0 apple 0 b 0 c 0 d 0 d1 0 dd 0 dobble 0 z 0 z1</div><div class="line">(integer) 12</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + -</div><div class="line"> 1) &quot;z1&quot;</div><div class="line"> 2) &quot;z&quot;</div><div class="line"> 3) &quot;dobble&quot;</div><div class="line"> 4) &quot;dd&quot;</div><div class="line"> 5) &quot;d1&quot;</div><div class="line"> 6) &quot;d&quot;</div><div class="line"> 7) &quot;c&quot;</div><div class="line"> 8) &quot;b&quot;</div><div class="line"> 9) &quot;apple&quot;</div><div class="line">10) &quot;abc&quot;</div><div class="line">11) &quot;aa&quot;</div><div class="line">12) &quot;a&quot;</div></pre></td></tr></table></figure>
+<h3 id="4-2-&#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;"><a href="#4-2-&#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;" class="headerlink" title="4.2 &#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;"></a><strong>4.2 &#x83B7;&#x53D6;&#x5206;&#x9875;&#x6570;&#x636E;</strong></h3><figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset + - LIMIT 0 3</div><div class="line">1) &quot;z1&quot;</div><div class="line">2) &quot;z&quot;</div><div class="line">3) &quot;dobble&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - LIMIT 3 3</div><div class="line">1) &quot;dd&quot;</div><div class="line">2) &quot;d1&quot;</div><div class="line">3) &quot;d&quot;</div></pre></td></tr></table></figure>
+<h3 id="4-3-&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"><a href="#4-3-&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;" class="headerlink" title="4.3 &#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"></a><strong>4.3 &#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;</strong></h3><p>&#x9ED8;&#x8BA4;&#x60C5;&#x51B5;&#x4E0B;, &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x5FC5;&#x987B;&#x52A0; &#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x3002;<br>&#x201C;[&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;, &#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4F1A;&#x5305;&#x542B;&#x53C2;&#x6570; &#x201C;min&#x201D; &#x548C; &#x201C;max&#x201D; &#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset [c [aa</div><div class="line">1) &quot;c&quot;</div><div class="line">2) &quot;b&quot;</div><div class="line">3) &quot;apple&quot;</div><div class="line">4) &quot;abc&quot;</div><div class="line">5) &quot;aa&quot;</div></pre></td></tr></table></figure>
+<p>&#x201C;min&#x201D; &#x548C; &#x201C;max&#x201D;  &#x4E0D;&#x80FD;&#x53CD;,  &#x201C;min&#x201D; &#x653E;&#x524D;&#x9762; &#x201C;max&#x201D;&#x653E;&#x540E;&#x9762;&#x4F1A;&#x5BFC;&#x81F4;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;&#x4E3A;&#x7A7A;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset [aa [c</div><div class="line">(empty list or set)</div></pre></td></tr></table></figure>
+<h3 id="4-4-&#x4F7F;&#x7528;-&#x201C;-&#x201C;-&#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"><a href="#4-4-&#x4F7F;&#x7528;-&#x201C;-&#x201C;-&#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;" class="headerlink" title="4.4 &#x4F7F;&#x7528; &#x201C;(&#x201C; &#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;"></a><strong>4.4 &#x4F7F;&#x7528; &#x201C;(&#x201C; &#x5C0F;&#x4E8E;&#x53F7;&#x83B7;&#x53D6;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x7684;&#x5143;&#x7D20;</strong></h3><p>&#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x53C2;&#x6570;&#x524D;&#x53EF;&#x4EE5;&#x52A0; &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4F5C;&#x4E3A;&#x5F00;&#x5934;&#x8868;&#x793A;&#x5C0F;&#x4E8E;, &#x201C;(&#x201C; &#x7B26;&#x53F7;&#x4E0E;&#x6210;&#x5458;&#x4E4B;&#x95F4;&#x4E0D;&#x80FD;&#x6709;&#x7A7A;&#x683C;&#x3002;<br>&#x8FD4;&#x56DE;&#x6210;&#x5458;&#x7ED3;&#x679C;&#x96C6;&#x4E0D;&#x4F1A;&#x5305;&#x542B; &#x201C;max&#x201D; &#x548C; &#x201C;min&#x201D; &#x6210;&#x5458;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX zset (c [aa</div><div class="line">1) &quot;b&quot;</div><div class="line">2) &quot;apple&quot;</div><div class="line">3) &quot;abc&quot;</div><div class="line">4) &quot;aa&quot;</div></pre></td></tr></table></figure>
+<h3 id="4-5-ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;"><a href="#4-5-ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;" class="headerlink" title="4.5 ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;"></a><strong>4.5 ASCII&#x7801;&#x7684;&#x5F71;&#x54CD;</strong></h3><p>&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x4F5C;&#x4E3A;&#x4E8C;&#x8FDB;&#x5236;&#x6570;&#x7EC4;&#x7684;&#x5B57;&#x8282;&#x6570;&#x8FDB;&#x884C;&#x6BD4;&#x8F83;&#x3002;<br>&#x9ED8;&#x8BA4;&#x662F;&#x4EE5;ASCII&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x987A;&#x5E8F;&#x8FDB;&#x884C;&#x6392;&#x5217;&#x3002;<br>&#x5982;&#x679C;&#x6210;&#x5458;&#x5B57;&#x7B26;&#x4E32;&#x5305;&#x542B;utf-8&#x8FD9;&#x7C7B;&#x5B57;&#x7B26;&#x96C6;&#x7684;&#x5185;&#x5BB9;,&#x5C31;&#x4F1A;&#x5F71;&#x54CD;&#x8FD4;&#x56DE;&#x7ED3;&#x679C;,&#x6240;&#x4EE5;&#x5EFA;&#x8BAE;&#x4E0D;&#x8981;&#x4F7F;&#x7528;&#x3002;</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div><div class="line">11</div><div class="line">12</div><div class="line">13</div><div class="line">14</div><div class="line">15</div><div class="line">16</div><div class="line">17</div><div class="line">18</div><div class="line">19</div><div class="line">20</div><div class="line">21</div><div class="line">22</div><div class="line">23</div><div class="line">24</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd zset 0 dB</div><div class="line">(integer) 1</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + -</div><div class="line"> 1) &quot;z1&quot;</div><div class="line"> 2) &quot;z&quot;</div><div class="line"> 3) &quot;dobble&quot;</div><div class="line"> 4) &quot;dd&quot;</div><div class="line"> 5) &quot;dB&quot;</div><div class="line"> 6) &quot;d1&quot;</div><div class="line"> 7) &quot;d&quot;</div><div class="line"> 8) &quot;c&quot;</div><div class="line"> 9) &quot;b&quot;</div><div class="line">10) &quot;apple&quot;</div><div class="line">11) &quot;abc&quot;</div><div class="line">12) &quot;aa&quot;</div><div class="line">13) &quot;a&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - limit 0 3</div><div class="line">1) &quot;z1&quot;</div><div class="line">2) &quot;z&quot;</div><div class="line">3) &quot;dobble&quot;</div><div class="line">redis&gt; ZREVRANGEBYLEX zset + - limit 3 3</div><div class="line">1) &quot;dd&quot;</div><div class="line">2) &quot;dB&quot;</div><div class="line">3) &quot;d1&quot;</div></pre></td></tr></table></figure>
+<h2 id="5-&#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;"><a href="#5-&#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;" class="headerlink" title="5 &#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;"></a>5 &#x4F7F;&#x7528;&#x573A;&#x666F;&#x793A;&#x4F8B;</h2><h3 id="5-1-&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;"><a href="#5-1-&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;" class="headerlink" title="5.1 &#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;"></a><strong>5.1 &#x7535;&#x8BDD;&#x53F7;&#x7801;&#x6392;&#x5E8F;</strong></h3><p>&#x6211;&#x4EEC;&#x53EF;&#x4EE5;&#x5C06;&#x7535;&#x8BDD;&#x53F7;&#x7801;&#x5B58;&#x50A8;&#x5230;SortSet&#x4E2D;,&#x7136;&#x540E;&#x6839;&#x636E;&#x9700;&#x8981;&#x6765;&#x83B7;&#x53D6;&#x53F7;&#x6BB5;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd phone 0 13100111100 0 13110114300 0 13132110901 </div><div class="line">(integer) 3</div><div class="line">redis&gt; zadd phone 0 13200111100 0 13210414300 0 13252110901 </div><div class="line">(integer) 3</div><div class="line">redis&gt; zadd phone 0 13300111100 0 13310414300 0 13352110901 </div><div class="line">(integer) 3</div></pre></td></tr></table></figure>
+<p>&#x4ECE;&#x5927;&#x5230;&#x5C0F;&#x83B7;&#x53D6;&#x6240;&#x6709;&#x53F7;&#x7801;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div><div class="line">8</div><div class="line">9</div><div class="line">10</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone + -</div><div class="line">1) &quot;13352110901&quot;</div><div class="line">2) &quot;13310414300&quot;</div><div class="line">3) &quot;13300111100&quot;</div><div class="line">4) &quot;13252110901&quot;</div><div class="line">5) &quot;13210414300&quot;</div><div class="line">6) &quot;13200111100&quot;</div><div class="line">7) &quot;13132110901&quot;</div><div class="line">8) &quot;13110114300&quot;</div><div class="line">9) &quot;13100111100&quot;</div></pre></td></tr></table></figure>
+<p>&#x83B7;&#x53D6;132&#x53F7;&#x6BB5;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone (133 [132</div><div class="line">1) &quot;13252110901&quot;</div><div class="line">2) &quot;13210414300&quot;</div><div class="line">3) &quot;13200111100&quot;</div></pre></td></tr></table></figure>
+<p>&#x83B7;&#x53D6;132&#x3001;133&#x53F7;&#x6BB5;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX phone (134 [132</div><div class="line">1) &quot;13352110901&quot;</div><div class="line">2) &quot;13310414300&quot;</div><div class="line">3) &quot;13300111100&quot;</div><div class="line">4) &quot;13252110901&quot;</div><div class="line">5) &quot;13210414300&quot;</div><div class="line">6) &quot;13200111100&quot;</div></pre></td></tr></table></figure>
+<h3 id="5-2-&#x59D3;&#x540D;&#x6392;&#x5E8F;"><a href="#5-2-&#x59D3;&#x540D;&#x6392;&#x5E8F;" class="headerlink" title="5.2 &#x59D3;&#x540D;&#x6392;&#x5E8F;"></a><strong>5.2 &#x59D3;&#x540D;&#x6392;&#x5E8F;</strong></h3><p>&#x5C06;&#x540D;&#x79F0;&#x5B58;&#x50A8;&#x5230;SortSet&#x4E2D;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div></pre></td><td class="code"><pre><div class="line">redis&gt; zadd names 0 Toumas 0 Jake 0 Bluetuo 0 Gaodeng 0 Aimini 0 Aidehua </div><div class="line">(integer) 6</div></pre></td></tr></table></figure>
+<p>&#x83B7;&#x53D6;&#x6240;&#x6709;&#x4EBA;&#x7684;&#x540D;&#x5B57;&#x5012;&#x5E8F;&#x6392;&#x5217;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div><div class="line">5</div><div class="line">6</div><div class="line">7</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names + -</div><div class="line">1) &quot;Toumas&quot;</div><div class="line">2) &quot;Jake&quot;</div><div class="line">3) &quot;Gaodeng&quot;</div><div class="line">4) &quot;Bluetuo&quot;</div><div class="line">5) &quot;Aimini&quot;</div><div class="line">6) &quot;Aidehua&quot;</div></pre></td></tr></table></figure>
+<p>&#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x5927;&#x5199;&#x5B57;&#x6BCD;A&#x5F00;&#x5934;&#x7684;&#x6240;&#x6709;&#x4EBA;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names (B [A</div><div class="line">1) &quot;Aimini&quot;</div><div class="line">2) &quot;Aidehua&quot;</div></pre></td></tr></table></figure>
+<p>&#x83B7;&#x53D6;&#x540D;&#x5B57;&#x4E2D;&#x5927;&#x5199;&#x5B57;&#x6BCD;C&#x5230;Z&#x7684;&#x6240;&#x6709;&#x4EBA;:</p>
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><div class="line">1</div><div class="line">2</div><div class="line">3</div><div class="line">4</div></pre></td><td class="code"><pre><div class="line">redis&gt; ZREVRANGEBYLEX names [Z [C</div><div class="line">1) &quot;Toumas&quot;</div><div class="line">2) &quot;Jake&quot;</div><div class="line">3) &quot;Gaodeng&quot;</div></pre></td></tr></table></figure>
+]]></content>
+    
+    <summary type="html">
+    
+      Redis有序集合命令ZREVRANGEBYLEX详解与应用
     
     </summary>
     
